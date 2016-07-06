@@ -2,7 +2,7 @@
 
 require_once("mysql_con.php");
 
-
+session_start();
 
 
 // 驗證登入表單填寫狀況
@@ -27,7 +27,7 @@ echo 'all_empty';
 
 
 // 取得登入者資訊
-$login_query = "SELECT username, password FROM user_table";
+$login_query = "SELECT username, password, level FROM user_table";
 
 $result_data = mysqli_query($conn, $login_query);
 
@@ -38,6 +38,12 @@ $row = mysqli_fetch_array($result_data);
 
 // 驗證帳號是否已註冊
 if ($result_num == 1 && $row['username'] == $_POST['lo_username'] && $row['password'] == $_POST['lo_password']) {
+
+	$_SESSION['username'] = $row['username'];
+    
+    $_SESSION['password'] = $row['password'];
+
+    $_SESSION['level'] = $row['level'];
 
 	echo 'pass';
 

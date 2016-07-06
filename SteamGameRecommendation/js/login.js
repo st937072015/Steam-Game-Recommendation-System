@@ -58,6 +58,8 @@ $("#password-status").attr("class", "account-ststus-error").text("密碼不可�
 $("#username-status").attr("class", "account-ststus-correct").text("帳號通過").slideDown("fast");
 $("#password-status").attr("class", "account-ststus-correct").text("密碼通過").slideDown("fast");
 
+window.location="panel_main.php";
+
 
 }else if(login_check == "account_error"){
 

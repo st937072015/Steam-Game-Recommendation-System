@@ -1,4 +1,7 @@
-<!doctype html>
+<?php 
+require_once("login_double_check.php");
+?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
@@ -6,8 +9,8 @@
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<!-- <link rel="stylesheet" href="css/bootstrap-responsive.css"> -->
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-	<link rel="stylesheet" href="css/toggle-switch.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/panel_toggle_switch.css">
+	<link rel="stylesheet" href="css/panel_style.css">
 	<!--[if lt IE 9]>
 	<script src="dist/html5shiv.js"></script>
 	<![endif]-->

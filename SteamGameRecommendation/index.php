@@ -31,30 +31,29 @@
 <div class="form">
   <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>
   <form class="register-form">
-    <input type="text" placeholder="username" name="re_username" />
-    <input type="password" placeholder="password" name="re_password" />
-    <input type="text" placeholder="email address" name="re_email" />
+    <input type="text" placeholder="電子信箱" name="re_username" />
+    <input type="password" placeholder="密碼" name="re_password" />
     <button>create</button>
-    <p class="message">Already registered? <a class="login_btn" href="#">Sign In</a></p>
-    <p class="message">Forgot password? <a class="forgot_btn" href="#">Request your password</a></p>
+    <p class="message">已經註冊了嗎? <a class="login_btn" href="#">進行登入</a></p>
+    <p class="message">忘記密碼了嗎? <a class="forgot_btn" href="#">重新設定您的密碼</a></p>
   </form>
 
   <form class="login-form" method="post">
-    <input type="text" placeholder="username" name="lo_username" />
+    <input type="text" placeholder="電子信箱" name="lo_username" />
     <div id="username-status" ></div>
-    <input type="password" placeholder="password" name="lo_password" />
+    <input type="password" placeholder="密碼" name="lo_password" />
     <div id="password-status" ></div>
-    <button id="login" type="submit">login</button>
+    <button id="login" type="submit">登入</button>
     <div class="loading"><i class="fa fa-spinner fa-spin fa-3x"></i></div>
-    <p class="message">Not registered? <a class="register_btn" href="#">Create an account</a></p>
-    <p class="message">Forgot password? <a class="forgot_btn" href="#">Request your password</a></p>
+    <p class="message">想做受測嗎? <a class="register_btn" href="#">進行註冊</a></p>
+    <p class="message">忘記密碼了嗎? <a class="forgot_btn" href="#">重新設定您的密碼</a></p>
   </form>
 
   <form class="forgot-form">
-    <input type="text" placeholder="email address" name="for_email" />
-    <button>request</button>
-    <p class="message">Already registered? <a class="register_btn" href="#">Create an account</a></p>
-    <p class="message">Not registered? <a class="login_btn" href="#">Sign In</a></p>
+    <input type="text" placeholder="電子信箱" name="for_email" />
+    <button>發送重設密碼認證信</button>
+    <p class="message">想做受測嗎? <a class="register_btn" href="#">進行註冊</a></p>
+    <p class="message">已經註冊了嗎? <a class="login_btn" href="#">進行登入</a></p>
   </form>
 
 
