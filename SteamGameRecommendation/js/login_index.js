@@ -3,7 +3,7 @@
 var index = 0;
 
 
-// 會員註冊
+// 會員註冊表單
 $(".register_btn").click(function(){
 
 index = 0;
@@ -18,7 +18,7 @@ $(".login-form").hide();
 });
 
 
-// 會員登入
+// 會員登入表單
 $(".login_btn").click(function(){
 
 index = 1;
@@ -34,7 +34,7 @@ $(".forgot-form").hide();
   
 });
 
-// 忘記密碼
+// 忘記密碼表單
 $(".forgot_btn").click(function(){
 
 index = 2;

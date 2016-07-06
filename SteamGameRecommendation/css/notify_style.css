@@ -1,0 +1,17 @@
+.account-ststus-error{
+
+color: #bd2c00;
+display: none;
+font-size: 16px;
+margin: 0 0 15px;
+
+}
+
+.account-ststus-correct{
+
+color: #6cc644;
+display: none;
+font-size: 16px;
+margin: 0 0 15px;
+
+}

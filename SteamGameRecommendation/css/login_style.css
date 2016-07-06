@@ -40,7 +40,7 @@
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   box-sizing: border-box;
-  font-size: 14px;
+  font-size: 16px;
 }
 .form button {
   outline: 0;
@@ -53,7 +53,7 @@
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
   color: #FFFFFF;
-  font-size: 14px;
+  font-size: 16px;
   -webkit-transition: all 0.3 ease;
   transition: all 0.3 ease;
   cursor: pointer;

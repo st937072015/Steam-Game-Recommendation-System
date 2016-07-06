@@ -2,6 +2,11 @@ $(document).ready(function(){
 
 
 
+
+
+
+
+
 $("#login").click(function() {
 
 $.ajax({
@@ -13,30 +18,45 @@ $.ajax({
 .done(function(login_check) {
 	console.log("login_check");
 
-if (login_check == 'username_empty') {
+// 判斷登入表單填寫狀態	
 
-    alert('帳號不可為空');
+if (login_check == "username_empty") {
 
+// 帳號留空白   
+$("#username-status").attr("class", "account-ststus-error").text("帳號不可為空").slideDown( "fast" );
 
-}else if(login_check == 'password_empty'){
-
-   alert('密碼不可為空');
-
-}else if(login_check == 'all_empty'){
+$("#password-status").hide("slow");
 
 
-alert('帳號與密碼皆為空白');
+
+}else if(login_check == "password_empty"){
+
+// 密碼留空白   
+$("#username-status").hide("slow");
+$("#password-status").attr("class", "account-ststus-error").text("密碼不可為空").slideDown( "fast" );
 
 
-}else if(login_check == 'pass'){
 
 
-alert('都有填完');
+
+}else if(login_check == "all_empty"){
+
+
+
+// 帳號留空白與密碼皆留空白  
+$("#username-status").attr("class", "account-ststus-error").text("帳號不可為空").slideDown( "fast" );
+$("#password-status").attr("class", "account-ststus-error").text("密碼不可為空").slideDown( "fast" );
+
+
+}else if(login_check == "pass"){
+
+
+// 帳號留空白與密碼皆通過 
+$("#username-status").attr("class", "account-ststus-correct").text("帳號通過").slideDown( "fast" );
+$("#password-status").attr("class", "account-ststus-correct").text("密碼通過").slideDown( "fast" );
 
 
 }
-
-
 
 
 
@@ -48,11 +68,18 @@ alert('都有填完');
 	console.log("complete");
 });
 
+
 return false;
 
 
 
 });
+
+
+
+
+
+
 
 
 

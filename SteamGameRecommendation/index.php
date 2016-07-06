@@ -7,6 +7,7 @@
     
 <link rel="stylesheet" href="css/login_reset.css">
 <link rel="stylesheet" href="css/login_style.css">
+<link rel="stylesheet" href="css/notify_style.css">
 
 <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
 <link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Montserrat:400,700'>
@@ -40,7 +41,9 @@
 
   <form class="login-form" method="post">
     <input type="text" placeholder="username" name="lo_username" />
+    <div id="username-status" ></div>
     <input type="password" placeholder="password" name="lo_password" />
+    <div id="password-status" ></div>
     <button id="login" type="submit">login</button>
     <p class="message">Not registered? <a class="register_btn" href="#">Create an account</a></p>
     <p class="message">Forgot password? <a class="forgot_btn" href="#">Request your password</a></p>
