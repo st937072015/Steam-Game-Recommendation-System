@@ -33,7 +33,7 @@
   <form class="register-form">
     <input type="text" placeholder="電子信箱" name="re_username" />
     <input type="password" placeholder="密碼" name="re_password" />
-    <button>create</button>
+    <button>註冊</button>
     <p class="message">已經註冊了嗎? <a class="login_btn" href="#">進行登入</a></p>
     <p class="message">忘記密碼了嗎? <a class="forgot_btn" href="#">重新設定您的密碼</a></p>
   </form>
