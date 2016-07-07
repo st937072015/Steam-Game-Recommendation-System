@@ -185,20 +185,15 @@ if (!$steam_account == "有") {
 $register_query = "INSERT INTO user_table(username,password,gender,age,level,agreement,steam_account,address) VALUES('$re_username','$re_password','$gender','$age','$level','$agree','$steam_account','$zone_address')";
 
 
-if (mysqli_query($conn, $register_query)) {
+   if (mysqli_query($conn, $register_query)) {
 
- $reg_check[9] = 9;
-	
- echo '<script type="text/javascript">alert("會員註冊成功!");</script>';
-   
- echo json_encode($reg_check);
+   $reg_check[9] = 9;
+	   
+   echo json_encode($reg_check);
 
-}else{
-
-echo '<script type="text/javascript">alert("會員註冊失敗!");</script>';
+   }
 
 
-}
 
 }else{
 
