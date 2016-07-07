@@ -187,7 +187,7 @@ $("#agree-status").attr("class", "account-ststus-error").text("同意協議必�
 // steam帳號填寫驗證 狀態不為9皆不合法
 if (register_check[6] != 9) {
 
-$("#agree-status").attr("class", "account-ststus-error").text("steam帳號不合法或空白").slideDown("fast");
+$("#steam-account-status").attr("class", "account-ststus-error").text("steam帳號不合法或空白").slideDown("fast");
 
 }	
 
