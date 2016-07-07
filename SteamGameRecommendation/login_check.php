@@ -28,11 +28,10 @@ session_start();
 // 預防SQL Injection
 $username = mysqli_real_escape_string($conn, $_POST['lo_username']);
 
-$password = mysqli_real_escape_string($conn, $_POST['lo_password']);
+$password = mysqli_real_escape_string($conn, md5($_POST['lo_password']));
 
 
-
-$login_query = "SELECT username, password, level FROM user_table WHERE username = '$username' AND password = '".md5($password)."'";
+$login_query = "SELECT username, password, level FROM user_table WHERE username = '$username' AND password = '$password'";
 
 $result_data = mysqli_query($conn, $login_query);
 
@@ -42,7 +41,7 @@ $row = mysqli_fetch_array($result_data);
 
 
 // 驗證帳號是否存在且合法
-if ($result_num == 1 && $row['username'] == $_POST['lo_username'] && $row['password'] == $_POST['lo_password']) {
+if ($result_num == 1 && $row['username'] == $_POST['lo_username'] && $row['password'] == md5($_POST['lo_password'])) {
 
 	$_SESSION['username'] = $row['username'];
 
