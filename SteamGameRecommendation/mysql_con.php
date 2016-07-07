@@ -14,7 +14,7 @@ $conn = @mysqli_connect($Server_name, $server_user, $server_password, $server_db
 
 if (mysqli_connect_errno($conn)) {
 
-	die("連線失敗");
+	die("connection_fail");
 
 }
 

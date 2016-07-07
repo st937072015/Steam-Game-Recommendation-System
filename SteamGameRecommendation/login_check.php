@@ -1,10 +1,5 @@
 <?php 
 
-require_once("mysql_con.php");
-
-session_start();
-
-
 // 驗證登入表單填寫狀況
 if ($_POST['lo_username'] == null && !$_POST['lo_password'] == null) {
 	
@@ -22,8 +17,10 @@ echo 'password_empty';
 echo 'all_empty';
 
 }else if(!$_POST['lo_username']  == null && !$_POST['lo_password']  == null ){
+	
+require_once("mysql_con.php");
 
-
+session_start();
 
 
 // 取得登入者資訊
@@ -48,8 +45,6 @@ $row = mysqli_fetch_array($result_data);
 if ($result_num == 1 && $row['username'] == $_POST['lo_username'] && $row['password'] == $_POST['lo_password']) {
 
 	$_SESSION['username'] = $row['username'];
-    
-    $_SESSION['password'] = $row['password'];
 
     $_SESSION['level'] = $row['level'];
 

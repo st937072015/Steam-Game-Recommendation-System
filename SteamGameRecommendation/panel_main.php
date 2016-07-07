@@ -11,49 +11,40 @@ require_once("login_double_check.php");
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/panel_toggle_switch.css">
 	<link rel="stylesheet" href="css/panel_style.css">
+	<link rel="stylesheet" href="css/font-awesome.css">
 	<!--[if lt IE 9]>
 	<script src="dist/html5shiv.js"></script>
 	<![endif]-->
 </head>
 <body>
-
+<div class="navbar navbar-inverse navbar-static-top">
+					<div class="navbar-inner ">
+						<ul class="nav">
+		  					<li><a href="#">受測說明</a></li>
+		  					<li class="divider-vertical"></li>
+		  					<li><a href="#">受測項目1</a></li>
+		  					<li class="divider-vertical"></li>
+		  					<li><a href="#">受測項目2</a></li>
+		  					<li class="divider-vertical"></li>
+		  					<li><a href="#">受測記錄</a></li>
+		  					<li class="divider-vertical"></li>
+						</ul>
+							<ul class="nav pull-right">
+							<li class="divider-vertical"></li>
+							<li><a href="#"><i class="fa fa-user-secret "></i> 倫納德您好 </a></li>
+							<li class="divider-vertical"></li>
+		  					<li><a href="#">登出</a></li>
+		  					<li class="divider-vertical"></li>
+						</ul>
+					</div> <!-- /.navbar-inner -->
+				</div> <!-- /.navbar -->
 	<div class="container">
-		<header>
-			<img src="img/logo.png" alt="ML Bootstrap Template">
-			<h1>ML Bootstrap Template</h1>
-		</header>
+
+
 
 		<div class="row navRow">
 			<div class="span12">
-				<div class="navbar">
-					<div class="navbar-inner">
-						<ul class="nav">
-		  					<li><a href="#">Home</a></li>
-		  					<li class="divider-vertical"></li>
-		  					<li><a href="#">About</a></li>
-		  					<li class="divider-vertical"></li>
-		  					<li><a href="#">Blog</a></li>
-		  					<li class="divider-vertical"></li>
-		  					<li><a href="#">Portfolio</a></li>
-		  					<li class="divider-vertical"></li>
-		  					<li class="dropdown">
-							    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							      Dropdown
-							      <b class="caret"></b>
-							    </a>
-								    <ul class="dropdown-menu">
-								      <li><a href="" tabindex="-1">Label 1</a></li>
-										<li><a href="" tabindex="-1">Label 2</a></li>
-										<li><a href="" tabindex="-1">Lable 3</a></li>
-								    </ul>
-							</li>
-							<li class="divider-vertical"></li>
-						</ul>
-						<form class="navbar-search pull-right">
-		  				<input type="text" class="search-query" placeholder="Search">
-						</form>
-					</div> <!-- /.navbar-inner -->
-				</div> <!-- /.navbar -->
+				
 			</div> <!-- /span12 -->
 		</div> <!-- /row -->
 
@@ -901,7 +892,8 @@ require_once("login_double_check.php");
 	</div> <!-- /container -->
 
 	<!-- JavaScript -->
-	<script src="js/jquery-1.10.1.min.js"></script>
+	<script src="js/jquery-3.0.0.js"></script>
+	<script src="js/jquery-migrate-3.0.0.js"></script>
 	<script src="js/bootstrap.js"></script>
 	<script>
 		$(document).ready(function()

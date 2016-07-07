@@ -22,3 +22,28 @@ display: none;
 
 
 }
+
+.join-status-success{
+
+background-color: #6cc644;
+color: #ffffff;
+display: none;
+font-size: 16px;
+margin: 15px 0 0;
+padding: 10px;
+font-weight:bold;
+	
+}
+
+.join-status-fail{
+
+background-color: #bd2c00;
+color: #ffffff;
+display: none;
+font-size: 16px;
+margin: 15px 0 0;
+padding: 10px;
+font-weight:bold;
+
+
+}

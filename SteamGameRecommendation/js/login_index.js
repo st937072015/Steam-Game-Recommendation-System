@@ -1,6 +1,6 @@
 // 判別表單狀態
 
-var index = 0;
+var index = 1;
 
 
 // 會員註冊表單
@@ -11,7 +11,6 @@ index = 0;
 $(".register-form").animate({height: "toggle", opacity: "toggle"}, "slow");
 $(".forgot-form").hide();
 $(".login-form").hide();
-
 
 }
 
