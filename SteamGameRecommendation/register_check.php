@@ -11,7 +11,7 @@ if ($_POST['gender'] == null) {
 	
 $reg_check[0] = 0;
 
-}else if (!strcmp($_POST['gender'],"男") == 0 || !strcmp($_POST['gender'],"女") == 0) {
+}else if (!strcmp($_POST['gender'],"男") == 0 && !strcmp($_POST['gender'],"女") == 0) {
 	
 $reg_check[0] = 1;
 
