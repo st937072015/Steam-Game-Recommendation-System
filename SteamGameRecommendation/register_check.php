@@ -28,7 +28,7 @@ if ($_POST['age'] == null) {
 
 $reg_check[1] = 0;
 
-}else if ((int)$_POST['age'] <= 20 || (int)$_POST['age'] >= 100 || !is_int((int)$_POST['age'])) {
+}else if ((int)$_POST['age']  < 20 || (int)$_POST['age'] >= 100 || !is_int((int)$_POST['age'])) {
 
 $reg_check[1] = 1;
 
