@@ -132,7 +132,7 @@ $.ajax({
 	console.log("register_check");
      
      // Debug
-	//alert(register_check);
+	alert(register_check);
 
 
 // 性別驗證 狀態不為9皆不合法
