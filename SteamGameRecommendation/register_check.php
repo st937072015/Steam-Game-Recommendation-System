@@ -11,7 +11,7 @@ if ($_POST['gender'] == null) {
 	
 $reg_check[0] = 0;
 
-}else if (!strcmp($_POST['gender'],"男") == 0 && !strcmp($_POST['gender'],"女") == 0) {
+}else if (!strcmp($_POST['gender'],"男") == 0 || !strcmp($_POST['gender'],"女") == 0) {
 	
 $reg_check[0] = 1;
 
@@ -63,7 +63,7 @@ $reg_check[3] = 9;
 }
 
 // 學歷檢查
-if (!strcmp($_POST['career'],"高中") == 0 || !strcmp($_POST['career'],"大學") == 0 || !strcmp($_POST['career'],"研究所以上") == 0 ) {
+if (!strcmp($_POST['career'],"高中") == 0 && !strcmp($_POST['career'],"大學") == 0 && !strcmp($_POST['career'],"研究所以上") == 0 ) {
 
 $reg_check[4] = 0;
 
@@ -85,7 +85,7 @@ $reg_check[5] = 9;
 }
 
 // steam帳號填寫檢查
-if (!strcmp($_POST['steam_account'],"有") == 0 || !strcmp($_POST['steam_account'],"無") == 0) {
+if (!strcmp($_POST['steam_account'],"有") == 0 && !strcmp($_POST['steam_account'],"無") == 0) {
 
 $reg_check[6] = 0;
 

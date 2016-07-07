@@ -50,8 +50,8 @@
     <div id="steam-account-status" ></div>
     <p>性別</p>
     <select name="gender">
-    <option value="有">有</option>
-    <option value="無">無</option>
+    <option value="男">男</option>
+    <option value="女">女</option>
     </select>
     <div id="gender-status" ></div>
     <p>學歷</p>

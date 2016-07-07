@@ -173,7 +173,7 @@ $("#nickname-status").attr("class", "account-ststus-error").text("暱稱或姓�
 // 學歷驗證 狀態不為9皆不合法
 if (register_check[4] != 9) {
 
-$("#school-status").attr("class", "account-ststus-error").text("學歷不合法填或空白").slideDown("fast");
+$("#school-status").attr("class", "account-ststus-error").text("學歷不合法或空白").slideDown("fast");
 
 }	
 
