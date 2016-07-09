@@ -206,14 +206,36 @@ $register_query = "INSERT INTO user_table(username,password,gender,nickname,age,
    if (mysqli_query($conn, $register_query)) {
 
    $reg_check[9] = 9;
+
+
+
+// 寄送帳號註冊成功通知信
+require_once("sendmail_function.php");
+
+$sender_email ='st937072015@gmail.com';
+$sender_name = 'Steam社群平台遊戲推薦系統管理者';
+$receiver_email = $re_username;
+$receiver_name = $nickname . '，受測者';
+
+$mail_subject = $nickname . '，受測者，您好！' . '非常感謝您！您的Steam社群平台遊戲推薦系統帳號已經完成註冊！';
+$mail_content = $nickname . '，受測者，您好！' . '非常感謝您抽空願意來參與此研究之系統之受測，此研究受測系統將會花上您的一些時間，您的此次受測結果對於此研究將會是非常的重要，所以請務必用心與有耐心的完成此次受測，以上，非常感謝您！' . "<br><br><br>" . "以下為您的Steam社群平台遊戲推薦系統註冊帳號之資訊，請務必牢記您的帳號資訊：<br>帳號：".  $re_username . "<br>密碼：" . $_POST['re_password'] . "<br>性別：" . $gender . "<br>年齡：" . $age . "<br>暱稱：" . $nickname . "<br>禮券收件地址：" .$zone_address;
+
+
+
+   sendmail($sender_email, $sender_name , $receiver_email, $receiver_name, $mail_subject, $mail_content);
+
+
 	   
    echo json_encode($reg_check);
 
+
    }else{
+
 
    $reg_check[9] = 0;
    
    echo json_encode($reg_check);
+
    
    }
 
