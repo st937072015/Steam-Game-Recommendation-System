@@ -180,9 +180,27 @@ if (!$steam_account == "有") {
 }
 
 
+// 記錄受測者註冊ip
+$ip = null;
+
+if (!empty($_SERVER["HTTP_CLIENT_IP"])){
+
+    $ip = $_SERVER["HTTP_CLIENT_IP"];
+
+}else if(!empty($_SERVER["HTTP_X_FORWARDED_FOR"])){
+
+    $ip = $_SERVER["HTTP_X_FORWARDED_FOR"];
+
+}else{
+
+    $ip = $_SERVER["REMOTE_ADDR"];
+
+}
+
+
 
 // 進行新會員資料寫入資料庫
-$register_query = "INSERT INTO user_table(username,password,gender,nickname,age,level,agreement,steam_account,address) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$steam_account','$zone_address')";
+$register_query = "INSERT INTO user_table(username,password,gender,nickname,age,level,agreement,steam_account,address,ip) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$steam_account','$zone_address','$ip')";
 
    // 註冊成功與否狀態
    if (mysqli_query($conn, $register_query)) {
