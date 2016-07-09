@@ -182,7 +182,7 @@ if (!$steam_account == "有") {
 
 
 // 進行新會員資料寫入資料庫
-$register_query = "INSERT INTO user_table(username,password,gender,age,level,agreement,steam_account,address) VALUES('$re_username','$re_password','$gender','$age','$level','$agree','$steam_account','$zone_address')";
+$register_query = "INSERT INTO user_table(username,password,gender,nickname,age,level,agreement,steam_account,address) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$steam_account','$zone_address')";
 
    // 註冊成功與否狀態
    if (mysqli_query($conn, $register_query)) {
