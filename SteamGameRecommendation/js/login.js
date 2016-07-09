@@ -72,7 +72,7 @@ $("#password-status").attr("class", "account-ststus-error").text("或是密碼�
 }else if(login_check == "connection_fail"){
 
 //資料庫連線狀態
-$("#username-status").attr("class", "account-ststus-error").text("連線失敗，請洽管理員").slideDown("fast");
+$("#db-status").attr("class", "join-status-fail").text("連線失敗，請洽管理員").slideDown("fast");
 
 
 
@@ -119,7 +119,6 @@ $.ajax({
 	url: "register_check.php",
 	type: "POST",
 	data: $(".register-form").serializeArray(),
-	dataType: "json",
 	 beforeSend:function()
 	{
 			
@@ -128,17 +127,27 @@ $.ajax({
     
 	}
 })
-.done(function(register_check) {
-	console.log("register_check");
+.done(function(register_check_data) {
+	console.log("register_check_data");
      
      // Debug
 	//alert(register_check);
+
+// 檢查資料庫連線狀態	
+if (register_check_data == "connection_fail") {
+
+$("#join-status").attr("class", "join-status-fail").text("連線失敗，請洽管理員").show("fast");
+
+}else{
+
+// json array轉換
+var register_check = jQuery.parseJSON(register_check_data);
 
 
 // 性別驗證 狀態不為9皆不合法
 if (register_check[0] != 9) {
 
-$("#gender-status").attr("class", "account-ststus-error").text("性別不合法").slideDown("fast");
+$("#gender-status").attr("class", "account-ststus-error").text("性別不合法或空白").slideDown("fast");
 
 }	
 
@@ -221,9 +230,9 @@ $("#re-password-status").attr("class", "account-ststus-error").text("密碼不�
 // 會員註冊是否成功驗證 狀態不為9皆不合法
 if (register_check[9] == 9) {
 
-$("#join-status").attr("class", "join-status-success").text("恭喜您，註冊成功!").show("fast");
 
-}else{
+
+}else if (register_check[9] == 0){
 
 
 
@@ -232,8 +241,9 @@ $("#join-status").attr("class", "join-status-fail").text("抱歉，註冊失敗!
 
 }
 
+//alert(register_check);
 
- 
+}// --> 檢查資料庫連線狀態若成功
 
 
 

@@ -78,6 +78,7 @@
     <input type="password" placeholder="密碼" name="lo_password" />
     <div id="password-status"></div>
     <button id="login" type="submit">登入</button>
+    <div id="db-status" ></div>
     <div class="loading"><i class="fa fa-spinner fa-spin fa-3x"></i></div>
     <p class="message">想做受測嗎? <a class="register_btn" href="#">進行註冊</a></p>
     <p class="message">忘記密碼了嗎? <a class="forgot_btn" href="#">重新設定您的密碼</a></p>

@@ -4,7 +4,7 @@ require_once("mysql_con.php");
 
 
 // 驗證註冊表單填寫狀況
-$reg_check = array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+$reg_check = array(null, null, null, null, null, null, null, null, null, null);
 
 // 性別驗證
 if ($_POST['gender'] == null) {
@@ -184,13 +184,19 @@ if (!$steam_account == "有") {
 // 進行新會員資料寫入資料庫
 $register_query = "INSERT INTO user_table(username,password,gender,age,level,agreement,steam_account,address) VALUES('$re_username','$re_password','$gender','$age','$level','$agree','$steam_account','$zone_address')";
 
-
+   // 註冊成功與否狀態
    if (mysqli_query($conn, $register_query)) {
 
    $reg_check[9] = 9;
 	   
    echo json_encode($reg_check);
 
+   }else{
+
+   $reg_check[9] = 0;
+   
+   echo json_encode($reg_check);
+   
    }
 
 

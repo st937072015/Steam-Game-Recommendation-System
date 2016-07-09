@@ -1,5 +1,7 @@
 <?php 
 
+require_once("mysql_con.php");
+
 // 驗證登入表單填寫狀況
 if ($_POST['lo_username'] == null && !$_POST['lo_password'] == null) {
 	
@@ -18,7 +20,6 @@ echo 'all_empty';
 
 }else if(!$_POST['lo_username']  == null && !$_POST['lo_password']  == null ){
 	
-require_once("mysql_con.php");
 
 session_start();
 
