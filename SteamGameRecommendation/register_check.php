@@ -4,6 +4,7 @@ require_once("mysql_con.php");
 
 
 // 驗證註冊表單填寫狀況
+// (性別, 年齡, 禮券收件地址, 暱稱姓氏, 學歷, 同意協議, steam帳號, email帳號, 密碼)
 $reg_check = array(null, null, null, null, null, null, null, null, null, null);
 
 // 性別驗證
@@ -153,7 +154,6 @@ if ($reg_check[0] == 9 && $reg_check[1] == 9 && $reg_check[2] == 9 && $reg_check
 	
 
 // 預防SQL Injection
-
 $gender = mysqli_real_escape_string($conn, $_POST['gender']);
 
 $age = mysqli_real_escape_string($conn, $_POST['age']);
