@@ -6,6 +6,8 @@ $("#login").click(function() {
 
 $("#username-status").hide();
 $("#password-status").hide();
+$("#db-status").hide();
+
 
 
 $.ajax({
