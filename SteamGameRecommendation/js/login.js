@@ -230,7 +230,7 @@ $("#re-password-status").attr("class", "account-ststus-error").text("密碼不�
 // 會員註冊是否成功驗證 狀態不為9皆不合法
 if (register_check[9] == 9) {
 
-$("#join-status").attr("class", "join-status-sucess").text("恭喜，此帳號已註冊失敗!").show("fast");
+$("#join-status").attr("class", "join-status-success").text("恭喜，此帳號已註冊成功!").show("fast");
 
 
 }else if (register_check[9] == 0){
