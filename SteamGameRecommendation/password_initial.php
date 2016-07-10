@@ -26,8 +26,8 @@ $row = mysqli_fetch_array($result_data);
 // 判斷是否已經要求過重置密碼
 if ($row['pass_reset'] == "無") {
 	
-   // 產生的雜湊連結
-$reset_index = md5($row['username']) . md5(date('Y/m/d')) . md5(date('h:i:sa'));
+// 產生的雜湊連結
+$reset_index = md5($row['username'] . date('Y/m/d') . date('h:i:sa'));
 
 // 寫入帳號密碼重置get雜湊連結
 $reset_query = "UPDATE user_table SET pass_reset = '$reset_index' WHERE username = '$email_reset'";
