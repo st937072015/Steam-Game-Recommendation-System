@@ -249,14 +249,6 @@ $("#join-status").attr("class", "join-status-fail").text("抱歉，此帳號已�
 
 }// --> 檢查資料庫連線狀態若成功
 
-
-
-
-
-
-
-
-
 })
 .fail(function() {
 
@@ -276,6 +268,96 @@ return false;
 
 
 });
+
+
+
+// <以下為忘記密碼功能--------------------------------------------------------------------------------------------------->
+$("#reset").click(function() {
+
+$("#reset-status").hide();
+$("#reset-send").hide();
+
+
+$.ajax({
+	url: "password_initial.php",
+	type: "POST",
+	data: $(".forgot-form").serialize(),
+	beforeSend:function()
+	{
+			
+   $("#reset").hide();
+   $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
+    
+	}
+})
+.done(function(reset_check_data) {
+	
+//alert(reset_check_data);
+
+if (reset_check_data == "connection_fail") {
+
+
+$("#reset-send").attr("class", "join-status-fail").text("連線失敗，請洽管理員").show("fast");
+
+
+}else if(reset_check_data == "email_empty"){
+
+
+$("#reset-status").attr("class", "account-ststus-error").text("電子郵件帳號不可空白").slideDown("fast");
+
+
+
+}else if(reset_check_data == "email_not_exist"){
+
+
+$("#reset-status").attr("class", "account-ststus-error").text("電子郵件帳號不存在").slideDown("fast");
+
+
+}else if(reset_check_data == "reset_email_send_success"){
+
+
+$("#reset-send").attr("class", "join-status-success").text("密碼重置信已寄送成功").show("fast");
+
+
+
+}else if(reset_check_data == "reset_email_send_fail"){
+
+
+$("#reset-send").attr("class", "join-status-fail").text("密碼重置信寄送失敗").show("fast");
+
+
+}else if(reset_check_data == "reset_email_send_already"){
+
+
+$("#reset-send").attr("class", "join-status-fail").text("此帳號的密碼重置信已經寄送過囉，如有問題請洽管理員").show("fast");
+
+
+}
+
+
+
+
+
+
+})
+.fail(function() {
+	console.log("error");
+})
+.always(function() {
+   $("#reset").show();
+   $(".loading").hide();
+});
+
+
+return false;
+
+
+});
+
+
+
+
+
 
 
 

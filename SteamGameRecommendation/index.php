@@ -71,7 +71,6 @@
     <p class="message">已經註冊了嗎? <a class="login_btn" href="#">進行登入</a></p>
     <p class="message">忘記密碼了嗎? <a class="forgot_btn" href="#">重新設定您的密碼</a></p>
   </form>
-
   <form class="login-form" method="post">
     <input type="text" placeholder="電子信箱" name="lo_username" />
     <div id="username-status" ></div>
@@ -84,9 +83,12 @@
     <p class="message">忘記密碼了嗎? <a class="forgot_btn" href="#">重新設定您的密碼</a></p>
   </form>
 
-  <form class="forgot-form">
+  <form class="forgot-form" method="post">
     <input type="text" placeholder="電子信箱" name="for_email" />
-    <button>發送重設密碼認證信</button>
+    <div id="reset-status" ></div>
+    <button id="reset" type="submit">發送重設密碼認證信</button>
+    <div id="reset-send" ></div>
+    <div class="loading"><i class="fa fa-spinner fa-spin fa-3x"></i></div>
     <p class="message">想做受測嗎? <a class="register_btn" href="#">進行註冊</a></p>
     <p class="message">已經註冊了嗎? <a class="login_btn" href="#">進行登入</a></p>
   </form>
