@@ -170,6 +170,8 @@ $steam_account = mysqli_real_escape_string($conn, $_POST['steam_account']);
 
 $re_password = md5(mysqli_real_escape_string($conn, $_POST['re_password']));
 
+$career = mysqli_real_escape_string($conn, $_POST['career']);
+
 
 // level判別
 $level = '標準Steam玩家';
@@ -200,10 +202,12 @@ if (!empty($_SERVER["HTTP_CLIENT_IP"])){
 
 
 // 進行新會員資料寫入資料庫
-$register_query = "INSERT INTO user_table(username,password,gender,nickname,age,level,agreement,steam_account,address,ip) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$steam_account','$zone_address','$ip')";
+$register_query = "INSERT INTO user_table(username,password,gender,nickname,age,level,agreement,career,steam_account,address,ip) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$career','$steam_account','$zone_address','$ip')";
+
+mysqli_query($conn, $register_query);
 
    // 註冊成功與否狀態
-   if (mysqli_query($conn, $register_query)) {
+   if (mysqli_affected_rows($conn) == 1) {
 
    $reg_check[9] = 9;
 

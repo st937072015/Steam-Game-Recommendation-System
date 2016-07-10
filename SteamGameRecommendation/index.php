@@ -84,7 +84,7 @@
   </form>
 
   <form class="forgot-form" method="post">
-    <input type="text" placeholder="電子信箱" name="for_email" />
+    <input type="text" placeholder="要重設密碼的電子信箱帳號" name="for_email" />
     <div id="reset-status" ></div>
     <button id="reset" type="submit">發送重設密碼認證信</button>
     <div id="reset-send" ></div>

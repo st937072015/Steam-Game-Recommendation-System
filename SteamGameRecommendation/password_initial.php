@@ -6,11 +6,16 @@ require_once("mysql_con.php");
 
 // 防止SQL Injection
 $email_reset = mysqli_real_escape_string($conn, $_POST['for_email']);
+$key_reset = mysqli_real_escape_string($conn, $_GET['reset_key']);
 
-// 確認電子郵件帳號是否有註冊已存在
+// 確認電子郵件帳號是否有註冊已存在之sql指令
 $exist_check_query = "SELECT username, nickname, pass_reset FROM user_table WHERE username = '$email_reset'";
 
+// 確認雜湊連結是否存在之sql指令
+$exist_check_query2 = "SELECT pass_reset FROM user_table WHERE pass_reset = '$key_reset'";
+
 $result_data = mysqli_query($conn,$exist_check_query);
+$result_data2 = mysqli_query($conn,$exist_check_query2);
 
 // 判斷接收過來的參數條件
 if ($email_reset == null && isset($_POST['for_email'])) {
@@ -101,22 +106,111 @@ $mail_content = $row['nickname'] . '，受測者，您好！' . "以下為您的
 
 // <接收重設密碼雜湊文字--------------------------------------------------------------------------------------------------->
 
-/*else if () {
+else if (!isset($_POST['for_email']) && isset($_GET['reset_key']) && $_GET['reset_key'] != null && mysqli_num_rows($result_data2) == 1 && $_GET['reset_key'] != "無") {
+
+session_start();
+
+$_SESSION['reset_key'] = $key_reset;
+
+echo "<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset='UTF-8'>
+    <title>Steam Game Recommendation System</title>
+    
+    
+<link rel='stylesheet' href='css/login_reset.css'>
+<link rel='stylesheet' href='css/login_style.css'>
+<link rel='stylesheet' href='css/notify_style.css'>
+<link rel='stylesheet' href='css/font-awesome.css'>
+
+<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Roboto:400,100,300,500,700,900'>
+<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Montserrat:400,700'>
+
+
+<script src='js/jquery-3.0.0.js'></script>
+<script src='js/jquery-migrate-3.0.0.js'></script>
+<script src='js/login.js'></script>
+
+
+</head>
+
+
+  <body>
+
+<div class='container'>
+  <div class='info'>
+    <h1>Flat Login Form</h1>
+  </div>
+</div>
+<div class='form'>
+  
+
+
+  <form class='reset-check-form' method='post'>
+    <input type='password' placeholder='請設定要重設的新密碼' name='reset_check_password' />
+    <div id='reset-check-status' ></div>
+    <button id='reset-check' type='submit'>確認重設新密碼</button>
+    <div id='reset-check-send'></div>
+    <div class='loading'><i class='fa fa-spinner fa-spin fa-3x'></i></div>
+  </form>
+
+
+</div>
+  </body>
+</html>";
+
+
+
+
+
 
 
 
 // <其他皆非法--------------------------------------------------------------------------------------------------->
 }else{
 
+ echo "<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset='UTF-8'>
+    <title>Steam Game Recommendation System</title>
+    
+    
+<link rel='stylesheet' href='css/login_reset.css'>
+<link rel='stylesheet' href='css/login_style.css'>
+<link rel='stylesheet' href='css/notify_style.css'>
 
 
+
+<script src='js/jquery-3.0.0.js'></script>
+<script src='js/jquery-migrate-3.0.0.js'></script>
+
+
+</head>
+
+
+  <body>
+  <div class='container'>
+  <div class='info'>
+    <h1>請勿從事非法活動，謝謝。</h1>
+  </div>
+</div>
+
+<div class='form'>
+  
+<img src='img/notify/warning.png' height='250' width='300'>
+
+</div>
+  </body>
+</html>";
 
 
 
 }
 
 
-*/
+
 
 
 

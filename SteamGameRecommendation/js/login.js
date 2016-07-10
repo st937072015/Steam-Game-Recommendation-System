@@ -354,9 +354,98 @@ return false;
 
 });
 
+// <以下為忘記密碼進行重新設定功能--------------------------------------------------------------------------------------------------->
+
+$("#reset-check").click(function() {
+
+$("#reset-check-status").hide();
+$("#reset-check-send").hide();
+
+	$.ajax({
+		url: "password_ending.php",
+		type: "POST",
+		data: $(".reset-check-form").serialize(),
+		beforeSend:function()
+	    {
+			
+        $("#reset-check").hide();
+        $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
+    
+	    }
+
+	})
+	.done(function(reset_check_data2) {
+		console.log("success");
+		// Debug
+		//alert(reset_check_data2);
+   
+  if (reset_check_data2 == "new_password_set_success") {
+
+
+     $("#reset-check-send").attr("class", "join-status-success").text("密碼已重置完成").show("fast");
+
+
+     }else if(reset_check_data2 == "new_password_set_fail"){
 
 
 
+     $("#reset-check-send").attr("class", "join-status-fail").text("密碼重置失敗，因為您已經重置過囉").show("fast");
+
+
+
+
+
+     }else if(reset_check_data2 == "connection_fail"){
+
+
+
+     $("#reset-check-send").attr("class", "join-status-fail").text("連線失敗，請洽管理員").show("fast");
+
+
+
+     }else if(reset_check_data2 == "illegal"){
+
+
+
+     $("#reset-check-send").attr("class", "join-status-fail").text("請勿從事非法活動，謝謝").show("fast");
+
+
+
+     }else if (reset_check_data2 == "new_password_empty") {
+
+
+
+    $("#reset-check-status").attr("class", "account-ststus-error").text("要重新設置的密碼不可空白").slideDown("fast");
+
+
+     }
+
+
+
+
+
+
+
+
+
+
+
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	   $("#reset-check").show();
+       $(".loading").hide();
+	});
+	
+
+return false;
+
+
+
+});
 
 
 
