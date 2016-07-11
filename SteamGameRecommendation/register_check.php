@@ -176,7 +176,7 @@ $career = mysqli_real_escape_string($conn, $_POST['career']);
 // level判別
 $level = '標準Steam玩家';
 
-if (!$steam_account == "有") {
+if ($steam_account != "有") {
 
 	$level = '一般玩家';
 }
