@@ -170,40 +170,40 @@ echo "<!DOCTYPE html>
 // <其他皆非法--------------------------------------------------------------------------------------------------->
 }else{
 
- echo "<!DOCTYPE html>
+ echo '<!DOCTYPE html>
 <html >
   <head>
-    <meta charset='UTF-8'>
+    <meta charset="UTF-8">
     <title>Steam Game Recommendation System</title>
     
     
-<link rel='stylesheet' href='css/login_reset.css'>
-<link rel='stylesheet' href='css/login_style.css'>
-<link rel='stylesheet' href='css/notify_style.css'>
+<link rel="stylesheet" href="css/login_reset.css">
+<link rel="stylesheet" href="css/login_style.css">
+<link rel="stylesheet" href="css/notify_style.css">
 
 
 
-<script src='js/jquery-3.0.0.js'></script>
-<script src='js/jquery-migrate-3.0.0.js'></script>
+<script src="js/jquery-3.0.0.js"></script>
+<script src="js/jquery-migrate-3.0.0.js"></script>
 
 
 </head>
 
 
   <body>
-  <div class='container'>
-  <div class='info'>
+  <div class="container">
+  <div class="info">
     <h1>請勿從事非法活動，謝謝。</h1>
   </div>
 </div>
 
-<div class='form'>
+<div class="form">
   
-<img src='img/notify/warning.png' height='250' width='300'>
+<img src="img/notify/warning.png" height="250" width="300">
 
 </div>
   </body>
-</html>";
+</html>';
 
 
 
