@@ -1,7 +1,7 @@
 <?php 
 
 
-echo '<div class="navbar navbar-inverse navbar-static-top">
+echo '<div class="navbar navbar-inverse navbar-fixed-top">
 					<div class="navbar-inner ">
 						<ul class="nav">
 		  					<li><a href="#">受測說明</a></li>

@@ -20,49 +20,31 @@ require_once("login_double_check.php");
 <?php 
 require_once("header.php");
 ?>
-	<div class="container">
+
+<div class="container">
+
+<div class="row">
+<div class="span12">
+
+<div class="hero-unit">
+<center>
+<h1>Steam遊戲搜尋</h1>
+<form>
+<div class="row">
+<input type="text" name="game_search">
+</div>
+<div class="row">
+<button class="btn btn-large btn-inverse"><i class="fa fa-search"></i>搜尋</button>
+</div>
+</form>
+</center>
+   </div>
 
 
+	</div>
+     </div>
 
-		<div class="row navRow">
-			<div class="span12">
-				
-			</div> <!-- /span12 -->
-		</div> <!-- /row -->
 
-		<div class="row navRow">
-			<div class="span12">
-				<div class="navbar navbar-inverse">
-					<div class="navbar-inner">
-						<ul class="nav">
-		  					<li><a href="#">Home</a></li>
-		  					<li class="divider-vertical"></li>
-		  					<li><a href="#">About</a></li>
-		  					<li class="divider-vertical"></li>
-		  					<li><a href="#">Blog</a></li>
-		  					<li class="divider-vertical"></li>
-		  					<li><a href="#">Portfolio</a></li>
-		  					<li class="divider-vertical"></li>
-		  					<li class="dropdown">
-							    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							      Dropdown
-							      <b class="caret"></b>
-							    </a>
-								    <ul class="dropdown-menu">
-								      <li><a href="" tabindex="-1">Label 1</a></li>
-										<li><a href="" tabindex="-1">Label 2</a></li>
-										<li><a href="" tabindex="-1">Lable 3</a></li>
-								    </ul>
-							</li>
-							<li class="divider-vertical"></li>
-						</ul>
-						<form class="navbar-search pull-right">
-		  				<input type="text" class="search-query" placeholder="Search">
-						</form>
-					</div> <!-- /.navbar-inner -->
-				</div> <!-- /.navbar -->
-			</div> <!-- /span12 -->
-		</div> <!-- /row -->
 
 
 		<div class="row">
