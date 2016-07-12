@@ -32,7 +32,7 @@ $username = mysqli_real_escape_string($conn, $_POST['lo_username']);
 $password = mysqli_real_escape_string($conn, md5($_POST['lo_password']));
 
 
-$login_query = "SELECT username, password, level ,nickname FROM user_table WHERE username = '$username' AND password = '$password'";
+$login_query = "SELECT username, password, level ,nickname FROM user_account_table WHERE username = '$username' AND password = '$password'";
 
 $result_data = mysqli_query($conn, $login_query);
 

@@ -12,7 +12,7 @@ $nickname = mysqli_real_escape_string($conn, $_SESSION['nickname']);
 // 驗證登入者資訊
 
 // '".$_SESSION['username']."'
-$login_query = "SELECT username, level, nickname FROM user_table WHERE username = '$username' AND level = '$level' AND nickname = '$nickname'";
+$login_query = "SELECT username, level, nickname FROM user_account_table WHERE username = '$username' AND level = '$level' AND nickname = '$nickname'";
 
 $result_data = mysqli_query($conn, $login_query);
 

@@ -112,7 +112,7 @@ $reg_check[7] = 1;
 // 預防SQL Injection
 $re_username = mysqli_real_escape_string($conn, $_POST['re_username']);
 
-$register_username_query = "SELECT username FROM user_table WHERE username = '$re_username'";
+$register_username_query = "SELECT username FROM user_account_table WHERE username = '$re_username'";
 
 $username_result_data = mysqli_query($conn, $register_username_query);
 
@@ -202,7 +202,7 @@ if (!empty($_SERVER["HTTP_CLIENT_IP"])){
 
 
 // 進行新會員資料寫入資料庫
-$register_query = "INSERT INTO user_table(username,password,gender,nickname,age,level,agreement,career,steam_account,address,ip) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$career','$steam_account','$zone_address','$ip')";
+$register_query = "INSERT INTO user_account_table(username,password,gender,nickname,age,level,agreement,career,steam_account,address,ip) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$career','$steam_account','$zone_address','$ip')";
 
 mysqli_query($conn, $register_query);
 

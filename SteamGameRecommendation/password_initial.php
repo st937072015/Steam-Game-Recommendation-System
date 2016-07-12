@@ -9,10 +9,10 @@ $email_reset = mysqli_real_escape_string($conn, $_POST['for_email']);
 $key_reset = mysqli_real_escape_string($conn, $_GET['reset_key']);
 
 // 確認電子郵件帳號是否有註冊已存在之sql指令
-$exist_check_query = "SELECT username, nickname, pass_reset FROM user_table WHERE username = '$email_reset'";
+$exist_check_query = "SELECT username, nickname, pass_reset FROM user_account_table WHERE username = '$email_reset'";
 
 // 確認雜湊連結是否存在之sql指令
-$exist_check_query2 = "SELECT pass_reset FROM user_table WHERE pass_reset = '$key_reset'";
+$exist_check_query2 = "SELECT pass_reset FROM user_account_table WHERE pass_reset = '$key_reset'";
 
 $result_data = mysqli_query($conn,$exist_check_query);
 $result_data2 = mysqli_query($conn,$exist_check_query2);
@@ -35,7 +35,7 @@ if ($row['pass_reset'] == "無") {
 $reset_index = md5($row['username'] . date('Y/m/d') . date('h:i:sa'));
 
 // 寫入帳號密碼重置get雜湊連結
-$reset_query = "UPDATE user_table SET pass_reset = '$reset_index' WHERE username = '$email_reset'";
+$reset_query = "UPDATE user_account_table SET pass_reset = '$reset_index' WHERE username = '$email_reset'";
 
 
 

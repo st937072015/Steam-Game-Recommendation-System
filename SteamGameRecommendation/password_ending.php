@@ -18,7 +18,7 @@ echo 'new_password_empty';
 
 
 
-$set_password_query = "UPDATE user_table SET password = '" .md5($reset_password). "', pass_reset = '無' WHERE pass_reset = '" .$_SESSION['reset_key']. "'";
+$set_password_query = "UPDATE user_account_table SET password = '" .md5($reset_password). "', pass_reset = '無' WHERE pass_reset = '" .$_SESSION['reset_key']. "'";
 
 
 mysqli_query($conn,$set_password_query);
