@@ -23,6 +23,12 @@ display: none;
 
 }
 
+#search-output{
+
+/*display: none;*/
+
+}
+
 .join-status-success{
 
 background-color: #6cc644;
