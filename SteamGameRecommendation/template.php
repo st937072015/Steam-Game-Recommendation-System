@@ -254,8 +254,7 @@ require_once("header.php");
 			</div>
 
 			<div class="span4">
-				<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione labore dignissimos repellendus repudiandae. Quod, eius cupiditate repellendus repudiandae <a href="#">repellat facilis</a> harum alias magnam laboriosam ipsam rerum fuga dignissimos architecto aliquam.</p>
+				<p><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a><a href="#">repellat facilis</a></p>
 			</div>
 		</div> <!-- /row -->
 

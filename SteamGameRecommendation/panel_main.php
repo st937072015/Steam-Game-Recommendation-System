@@ -56,6 +56,7 @@ require_once("header.php");
 
 
 		</div> <!-- search-output -->
+		
 
 	</div> <!-- /container -->
 
