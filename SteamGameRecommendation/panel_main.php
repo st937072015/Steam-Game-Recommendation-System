@@ -50,7 +50,7 @@ require_once("header.php");
 
 
 
-<div class="loading"><i class="fa fa-spinner fa-spin fa-5x"></i></div>
+<center class="loading"><i class="fa fa-spinner fa-spin fa-5x"></i></center>
 <div id="search-output">
 
 

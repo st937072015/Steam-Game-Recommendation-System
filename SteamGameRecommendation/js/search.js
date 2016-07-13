@@ -19,10 +19,13 @@ $.ajax({
 .done(function(search_output) {
 	console.log("search_output");
     
-    alert(search_output);
+    //alert(search_output);
 
+
+
+    $(".loading").css({"color": "#6e5494", "font-size": "16px"}).hide();
     $("#search-output").html(search_output).show("fast");
-
+    
 
 })
 .fail(function() {
