@@ -47,9 +47,9 @@ $row_layout_num = ceil($game_search_result_num / 3);
 
 
 
-   	echo 	'<div class="span4">
-				<div class="thumbnail">
-					<img src="assets/img2.jpg" alt="Thumbnail 1">
+   	echo 	'<div class="span4 animated zoomIn">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">
 						<h3>' . $row['game_appid'] . '</h3>
 						<h3>' . $row['gamename'] . '</h3>

@@ -11,7 +11,7 @@ $.ajax({
 	 beforeSend:function()
 	{
 			
-   $("#search-output").hide();
+
    $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
     
 	}
@@ -24,7 +24,7 @@ $.ajax({
 
 
     $(".loading").css({"color": "#6e5494", "font-size": "16px"}).hide();
-    $("#search-output").html(search_output).show("fast");
+    $("#search-output").html(search_output);
     
 
 })
