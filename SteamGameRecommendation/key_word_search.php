@@ -79,7 +79,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
 
 
-   	echo 	'<div class="span3 animated zoomIn">
+   	echo 	'<div class="span3 animated fadeInLeft">
 				<div class="thumbnail small-card-background">
 					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">
@@ -122,9 +122,9 @@ $game_search_result = mysqli_query($conn,$game_search_query);
 $game_search_result_num = mysqli_num_rows($game_search_result);
 
 
-
-
-
+ 
+// 有查到資料才執行
+if ($game_search_result_num > 0) {
 
  while(true){ 
 
@@ -161,7 +161,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
 
 
-   	echo 	'<div class="span3 animated zoomIn">
+   	echo 	'<div class="span3 animated fadeInLeft">
 				<div class="thumbnail small-card-background">
 					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">
@@ -188,7 +188,7 @@ $row_count--;
 
 }
 
-
+}//---> 有查到資料才執行
 
 
 }//---> 非查詢全部遊戲
@@ -211,9 +211,6 @@ $page_layout_num = ceil($game_search_result_num / 12);
 
 
 
-
-
-
 // 輸出總分頁數
 for ($i=1; $i < $page_layout_num + 1; $i++) { 
 
@@ -231,6 +228,14 @@ for ($i=1; $i < $page_layout_num + 1; $i++) {
 
 
 }
+
+
+
+ // 找不到資料
+}else{
+
+
+ echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1>Unfortunately, 您所輸入的遊戲關鍵字並不存在!</h1></center>';
 
 
 
@@ -327,7 +332,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
 
 
-   	echo 	'<div class="span3 animated zoomIn">
+   	echo 	'<div class="span3 animated fadeInLeft">
 				<div class="thumbnail small-card-background">
 					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">
@@ -402,7 +407,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
 
 
-   	echo 	'<div class="span3 animated zoomIn">
+   	echo 	'<div class="span3 animated fadeInLeft">
 				<div class="thumbnail small-card-background">
 					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">
