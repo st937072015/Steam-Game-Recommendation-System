@@ -87,10 +87,13 @@ $.ajax({
     
     //alert(page_search_output);
 
-
+     
+    $("h3 a").removeClass("this-page");
 
     $(".loading").css({"color": "#6e5494", "font-size": "16px"}).hide();
     $("#game-info").html(page_search_output).show();
+    $("#this-page-" + game_page_index).addClass("this-page")
+
     
 
 })

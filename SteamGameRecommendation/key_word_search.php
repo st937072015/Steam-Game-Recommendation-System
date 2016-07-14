@@ -115,7 +115,7 @@ for ($i=1; $i < $page_layout_num + 1; $i++) {
 
 
 
-echo '<div class="span0"><h3><a href="javascript:void(0)" onclick="change_page(' . $i . ')">' . $i . '</a></h3></div>';
+echo '<div class="span0 page-num-style"><h3><a href="javascript:void(0)" onclick="change_page(' . $i . ')">' . $i . '</a></h3></div>';
 
 
 
