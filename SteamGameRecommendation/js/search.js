@@ -12,7 +12,7 @@ $.ajax({
 	{
 			
    $("#search-output").hide();
-   $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
+   $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
     
 	}
 })
@@ -23,7 +23,7 @@ $.ajax({
 
 
 
-    $(".loading").css({"color": "#6e5494", "font-size": "16px"}).hide();
+    $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
     $("#search-output").html(search_output).show();
     $("#this-page-1").addClass("this-page");
 
@@ -63,7 +63,7 @@ $.ajax({
 	{
 			
    $("#search-output").hide();
-   $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
+   $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
     
 	}
 })
@@ -74,7 +74,7 @@ $.ajax({
 
     
 
-    $(".loading").css({"color": "#6e5494", "font-size": "16px"}).hide();
+    $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
     $("#search-output").html(search_output).show();
     $("#this-page-1").addClass("this-page");
 
@@ -129,7 +129,7 @@ $.ajax({
 	{
 			
    $("#game-info").hide();
-   $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
+   $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
     
 	}
 })
@@ -141,7 +141,7 @@ $.ajax({
      
     $("h3 a").removeClass("this-page");
 
-    $(".loading").css({"color": "#6e5494", "font-size": "16px"}).hide();
+    $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
     $("#game-info").html(page_search_output).show();
     $("#this-page-" + game_page_index).addClass("this-page");
 

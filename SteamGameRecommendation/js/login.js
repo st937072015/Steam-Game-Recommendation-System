@@ -18,7 +18,7 @@ $.ajax({
 	{
 			
    $("#login").hide();
-   $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
+   $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
     
 	}
 })
@@ -126,7 +126,7 @@ $.ajax({
 	{
 			
    $("#register").hide();
-   $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
+   $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
     
 	}
 })
@@ -286,7 +286,7 @@ $.ajax({
 	{
 			
    $("#reset").hide();
-   $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
+   $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
     
 	}
 })
@@ -369,7 +369,7 @@ $("#reset-check-send").hide();
 	    {
 			
         $("#reset-check").hide();
-        $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
+        $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
     
 	    }
 
