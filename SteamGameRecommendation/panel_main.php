@@ -39,7 +39,7 @@ require_once("header.php");
 <input id="game-search" type="text" name="game_search">
 </div>
 <div class="row">
-<button class="btn btn-large btn-inverse"><i class="fa fa-search"></i>搜尋</button>
+<button id="see-all-game" class="btn btn-large btn-inverse"><i class="fa fa-search"></i>看全部遊戲</button>
 </div>
 </form>
 </center>

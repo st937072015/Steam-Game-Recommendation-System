@@ -25,7 +25,55 @@ $.ajax({
 
     $(".loading").css({"color": "#6e5494", "font-size": "16px"}).hide();
     $("#search-output").html(search_output).show();
+
     
+
+})
+.fail(function() {
+
+	console.log("error");
+
+})
+.always(function() {
+
+
+});
+
+
+return false;
+
+
+});
+
+// <以下為直接搜尋全部遊戲功能--------------------------------------------------------------------------------------------------->
+$("#see-all-game").click(function() {
+	
+var game_search = "see-all-game";
+
+
+$.ajax({
+	url: "key_word_search.php",
+	type: "POST",
+	data: {game_search: game_search},
+	cache: false,
+	 beforeSend:function()
+	{
+			
+   $("#search-output").hide();
+   $(".loading").css({"color": "#6e5494", "font-size": "16px"}).show();
+    
+	}
+})
+.done(function(search_output) {
+	console.log("search_output");
+    
+    //alert(search_output);
+
+    
+
+    $(".loading").css({"color": "#6e5494", "font-size": "16px"}).hide();
+    $("#search-output").html(search_output).show();
+    $("#this-page-1").addClass("this-page");
 
 })
 .fail(function() {
@@ -92,7 +140,7 @@ $.ajax({
 
     $(".loading").css({"color": "#6e5494", "font-size": "16px"}).hide();
     $("#game-info").html(page_search_output).show();
-    $("#this-page-" + game_page_index).addClass("this-page")
+    $("#this-page-" + game_page_index).addClass("this-page");
 
     
 
