@@ -219,7 +219,7 @@ for ($i=1; $i < $page_layout_num + 1; $i++) {
 
 
 
-	echo '<div class="span0 page-num-style"><h3><a id="this-page-' . $i . '" href="javascript:void(0)" onclick="change_page(' . $i . ')">' . $i . '</a></h3></div>';
+	echo '<div class="span0 page-num-style small-card-background"><h3><a id="this-page-' . $i . '" href="javascript:void(0)" onclick="change_page(' . $i . ')">' . $i . '</a></h3></div>';
 
 
 
@@ -235,7 +235,7 @@ for ($i=1; $i < $page_layout_num + 1; $i++) {
 }else{
 
 
- echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1>Unfortunately, 您所輸入的遊戲關鍵字並不存在!</h1></center>';
+ echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">Unfortunately, 您所輸入的遊戲關鍵字並不存在!</h1></center>';
 
 
 
