@@ -49,8 +49,10 @@ return false;
 // <以下為直接搜尋全部遊戲功能--------------------------------------------------------------------------------------------------->
 $("#see-all-game").click(function() {
 	
+
 var game_search = "see-all-game";
 
+$("#game-search").val("see-all-game");	
 
 $.ajax({
 	url: "key_word_search.php",
