@@ -3,16 +3,16 @@ require_once("mysql_con.php");
 require_once("login_double_check.php");
 
 
-//session_start();
+session_start();
 
 
 
-//$count = count($_SESSION['fav_cart']);
+$count = count($_SESSION['fav_cart']);
 
 
-$game_array = array('Counter-Strike' => 10, 'Team Fortress Classic' => 20, 'Day of Defeat' => 30);
+//$game_array = array('Counter-Strike' => 10, 'Team Fortress Classic' => 20, 'Day of Defeat' => 30);
 
-$count = count($game_array);
+//$count = count($game_array);
 
 
  ?>
@@ -72,7 +72,7 @@ if ($count > 0) {
 
 $game_cart_query = "SELECT game_appid, gamename FROM game_schema_table WHERE game_appid IN (";
 
-foreach ($game_array as $key => $value) {
+foreach ($_SESSION['fav_cart'] as $key => $value) {
 
 
 

@@ -16,11 +16,15 @@ require_once("login_double_check.php");
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/featherlight.min.css">
+	<link rel="stylesheet" href="css/sweetalert.css">
 
     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
     <script src="js/search.js"></script>
     <script src="js/featherlight.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+
+
    
 
 </head>

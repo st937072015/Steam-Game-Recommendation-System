@@ -197,15 +197,15 @@ $.ajax({
     
 	}
 })
-.done(function(page_search_output) {
-	console.log("page_search_output");
+.done(function(tag_page_search_output) {
+	console.log("tag_page_search_output");
     
   
-//alert(page_search_output);
+//alert(tag_page_search_output);
      
 
     $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
-    $("#search-output").html(page_search_output).show();
+    $("#search-output").html(tag_page_search_output).show();
 
     
 
@@ -234,34 +234,46 @@ return false;
 function game_add(appid){
 
 
-var tag_search = tag_name;
+var add_game = appid;
 
 
 //alert(tag_search);
 
 $.ajax({
-	url: "key_word_search.php",
+	url: "game_cart_check.php",
 	type: "POST",
-	data: {tag_search: tag_search},
+	data: {add_game: add_game},
 	cache: false,
 	 beforeSend:function()
 	{
 			
-   $("#search-output").hide();
    $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
     
 	}
 })
-.done(function(page_search_output) {
-	console.log("page_search_output");
+.done(function(game_add_output) {
+	console.log("game_add_output");
     
   
-//alert(page_search_output);
+//alert(game_add_output);
      
 
     $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
-    $("#search-output").html(page_search_output).show();
 
+    if (game_add_output == "success") {
+
+    swal("加入成功", "此遊戲已經加入到您的興趣清單中囉!", "success");
+    
+
+    }else if(game_add_output == "fail"){
+
+
+   swal("加入失敗", "此遊戲您已經加入過囉!", "error");
+
+
+
+    }
+     
     
 
 })
