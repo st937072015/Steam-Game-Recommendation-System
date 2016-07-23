@@ -108,22 +108,26 @@ $row_count = $row_layout_num;
 
 
 
+
+
+
 // 輸出遊戲屬性標籤雲
   while($row_count != 0){ 
 
-
+   $sql_append = $game_cart_query;
 
 
 	
    // 每一列遊戲資訊所起始的index位置
    $start_index = ($row_layout_num - $row_count) * 4;
 
-   $game_cart_query = $game_cart_query. ' LIMIT '.$start_index.',4';
-   //echo $game_cart_query;
+   $sql_append = $sql_append. ' LIMIT '.$start_index.',4';
+
+   echo $sql_append ;
 
    echo'<div class="row">';
    // 每一列只限制輸出4筆所查詢到的遊戲資訊
-   $game_cart_result = mysqli_query($conn,$game_cart_query);
+   $game_cart_result = mysqli_query($conn,$sql_append);
    while ($row = mysqli_fetch_array($game_cart_result)) {
 
 
