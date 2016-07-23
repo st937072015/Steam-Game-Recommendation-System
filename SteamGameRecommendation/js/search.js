@@ -255,7 +255,7 @@ $.ajax({
 	console.log("game_add_output");
     
   
-//alert(game_add_output);
+alert(game_add_output);
      
 
     $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();

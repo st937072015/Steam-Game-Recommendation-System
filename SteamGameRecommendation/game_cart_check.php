@@ -46,11 +46,6 @@ if ($game_add_result_num == 1) {
 
     	echo 'fail';
 
-    }else if(){
-
-     
-        
-
     }else{
 
        $_SESSION['fav_cart'][$row['gamename']] = $row['game_appid'];
