@@ -62,19 +62,27 @@ opacity: 1.0;
 
 }
 
-.page-num-style{
+.page-num-style{	
 
+font-size: 25px;
 background-color: #d7d7d7;	
 border-style: solid;
 border-color: #333333;
 border-width: 1px;
-padding-left: 10px;
-padding-right: 10px;
-padding-top: 1px;
-padding-bottom: 1px;
+padding: 10px;
 
 
 
+}
+
+.tag-page-style{
+
+font-size: 25px;
+background-color: #d7d7d7;	
+border-style: solid;
+border-color: #333333;
+border-width: 1px;
+padding: 10px;
 
 
 }
@@ -82,6 +90,13 @@ padding-bottom: 1px;
 .this-page{
 
 color: #CE1141;
+
+
+}
+
+.lightbox{
+
+display: none;
 
 
 }

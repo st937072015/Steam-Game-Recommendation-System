@@ -113,7 +113,6 @@ return false;
 function change_page(page_id){
 
 
-
 var game_page_index = page_id;
 
 var game_current_keyword = $("#game-search").val();
@@ -139,8 +138,7 @@ $.ajax({
     //alert(page_search_output);
 
      
-    $("h3 a").removeClass("this-page");
-
+    $("#search-output > a").removeClass("this-page");
     $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
     $("#game-info").html(page_search_output).show();
     $("#this-page-" + game_page_index).addClass("this-page");
@@ -176,6 +174,69 @@ return false;
 
 }
 
+// <以下為遊戲屬性標籤post搜尋功能--------------------------------------------------------------------------------------------------->
+
+function tag_page(tag_name){
+
+
+var tag_search = tag_name;
+
+
+alert(tag_search);
+
+$.ajax({
+	url: "key_word_search.php",
+	type: "POST",
+	data: {tag_search: tag_search},
+	cache: false,
+	 beforeSend:function()
+	{
+			
+   $("#search-output").hide();
+   $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
+    
+	}
+})
+.done(function(page_search_output) {
+	console.log("page_search_output");
+    
+  
+alert(page_search_output);
+     
+
+    $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
+    $("#search-output").html(page_search_output).show();
+
+    
+
+})
+.fail(function() {
+
+	console.log("error");
+
+})
+.always(function() {
+
+
+});
+
+return false;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 

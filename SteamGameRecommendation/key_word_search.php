@@ -46,8 +46,8 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
  while(true){ 
 
- // 限制查詢遊戲每頁顯示筆數 目前訂為一頁最多為12筆 --> 3列 (**重要參數設定**)
- if ($page_item_count > 3) {
+ // 限制查詢遊戲每頁顯示筆數 目前訂為一頁最多為24筆 --> 6列 (**重要參數設定**)
+ if ($page_item_count > 6) {
 
  	break;
 
@@ -62,7 +62,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
    
    echo'<div class="row">';
 
-   // 每一列只限制輸出3筆所查詢到的遊戲資訊
+   // 每一列只限制輸出4筆所查詢到的遊戲資訊
    $cut_row_result = mysqli_query($conn,"SELECT game_appid, gamename FROM game_schema_table LIMIT $start_index, 4");
 
 
@@ -101,7 +101,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
 $start_index  = $start_index  + 4;
 
-$row_count--;
+
 
 
 }
@@ -128,8 +128,8 @@ if ($game_search_result_num > 0) {
 
  while(true){ 
 
- // 限制查詢遊戲每頁顯示筆數 目前訂為一頁最多為12筆 --> 3列 (**重要參數設定**)
- if ($page_item_count > 3) {
+ // 限制查詢遊戲每頁顯示筆數 目前訂為一頁最多為24筆 --> 6列 (**重要參數設定**)
+ if ($page_item_count > 6) {
 
  	break;
 
@@ -144,7 +144,7 @@ if ($game_search_result_num > 0) {
    
    echo'<div class="row">';
 
-   // 每一列只限制輸出3筆所查詢到的遊戲資訊
+   // 每一列只限制輸出4筆所查詢到的遊戲資訊
    $cut_row_result = mysqli_query($conn,"SELECT game_appid, gamename FROM game_schema_table WHERE gamename LIKE '%$game_search_keyword%' LIMIT $start_index, 4");
 
 
@@ -183,7 +183,7 @@ if ($game_search_result_num > 0) {
 
 $start_index  = $start_index  + 4;
 
-$row_count--;
+
 
 
 }
@@ -207,7 +207,7 @@ if ($game_search_result_num > 0) {
 	
 
 // 計算必須輸出的總數量的總頁數(**重要參數設定**)
-$page_layout_num = ceil($game_search_result_num / 12);
+$page_layout_num = ceil($game_search_result_num / 24);
 
 
 
@@ -216,12 +216,15 @@ for ($i=1; $i < $page_layout_num + 1; $i++) {
 
 
 
+if ($i==1 || $i==2 || $i==3 || $i==4 || $i==5 || $i==6 || $i==7 || $i==8 || $i==9) {
 
+	echo '<a class="span0 page-num-style small-card-background" id="this-page-' . $i . '" href="javascript:void(0)" onclick="change_page(' . $i . ')">0' . $i . '</a>';
 
+}else{
 
-	echo '<div class="span0 page-num-style small-card-background"><h3><a id="this-page-' . $i . '" href="javascript:void(0)" onclick="change_page(' . $i . ')">' . $i . '</a></h3></div>';
+	echo '<a class="span0 page-num-style small-card-background" id="this-page-' . $i . '" href="javascript:void(0)" onclick="change_page(' . $i . ')">' . $i . '</a>';
 
-
+}
 
 
 
@@ -273,7 +276,7 @@ if (isset($_POST['game_page_index']) && $_POST['game_page_index'] != null && is_
 
 	
  // 每一列遊戲資訊所起始的index位置(**重要參數設定**)
- $start_index = ($game_page_index - 1) * 12;
+ $start_index = ($game_page_index - 1) * 24;
 
 
 
@@ -297,8 +300,8 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
  while(true){ 
 
- // 限制查詢遊戲每頁顯示筆數 目前訂為一頁最多為12筆 --> 3列 (**重要參數設定**)
- if ($page_item_count > 3) {
+ // 限制查詢遊戲每頁顯示筆數 目前訂為一頁最多為24筆 --> 6列 (**重要參數設定**)
+ if ($page_item_count > 6) {
 
  	break;
 
@@ -315,7 +318,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
    
    echo'<div class="row">';
 
-   // 每一列只限制輸出3筆所查詢到的遊戲資訊
+   // 每一列只限制輸出4筆所查詢到的遊戲資訊
    $cut_row_result = mysqli_query($conn,"SELECT game_appid, gamename FROM game_schema_table LIMIT $start_index, 4");
 
 
@@ -372,8 +375,8 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
  while(true){ 
 
- // 限制查詢遊戲每頁顯示筆數 目前訂為一頁最多為12筆 --> 3列 (**重要參數設定**)
- if ($page_item_count > 3) {
+ // 限制查詢遊戲每頁顯示筆數 目前訂為一頁最多為24筆 --> 6列 (**重要參數設定**)
+ if ($page_item_count > 6) {
 
  	break;
 
@@ -390,7 +393,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
    
    echo'<div class="row">';
 
-   // 每一列只限制輸出3筆所查詢到的遊戲資訊
+   // 每一列只限制輸出4筆所查詢到的遊戲資訊
    $cut_row_result = mysqli_query($conn,"SELECT game_appid, gamename FROM game_schema_table WHERE gamename LIKE '%$game_current_keyword%' LIMIT $start_index, 4");
 
 
@@ -452,6 +455,94 @@ $start_index = $start_index + 4;
 }
 
 
+
+
+
+// <以下為標籤雲搜尋區塊--------------------------------------------------------------------------------------------------->
+
+if (isset($_POST['tag_search']) && $_POST['tag_search'] != null && !isset($_POST['game_page_index']) && !isset($_POST['game_search'])) {
+
+
+$tag_name = mysqli_real_escape_string($conn,$_POST['tag_search']);
+
+
+$game_tag_query = "SELECT game_appid, tag_name FROM game_tag_table WHERE tag_name = '$tag_name'";
+
+$game_tag_result = mysqli_query($conn, $game_tag_query);
+
+$game_tag_result_num = mysqli_num_rows($game_tag_result);
+
+
+// 計算必須輸出的總列數
+$row_layout_num = ceil($game_tag_result_num / 4);
+
+// 計算index起始位置
+$row_count = $row_layout_num;
+
+
+
+// 輸出遊戲屬性標籤雲
+  while($row_count != 0){ 
+	
+   // 每一列遊戲資訊所起始的index位置
+   $start_index = ($row_layout_num - $row_count) * 4;
+   echo'<div class="row">';
+   // 每一列只限制輸出4筆所查詢到的遊戲資訊
+   $game_tag_result = mysqli_query($conn,"SELECT game_appid, gamename,tag_name FROM game_tag_table WHERE tag_name = '$tag_name' LIMIT $start_index, 4");
+   while ($row = mysqli_fetch_array($game_tag_result)) {
+
+
+
+
+   
+   	echo 	'<div class="span3 animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
+					<div class="caption">
+						<h3>' . $row['game_appid'] . '</h3>
+						<h3>' . $row['gamename'] . '</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione labore dignissimos repellendus repudiandae. </p>
+						<p><a class="btn btn-primary" href="">Learn More</a></p>
+					</div>
+				</div>
+			</div>';
+
+
+
+
+
+   }
+  echo '</div>';
+$row_count--;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
 
 
 
