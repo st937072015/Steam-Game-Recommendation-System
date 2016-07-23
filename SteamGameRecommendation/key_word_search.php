@@ -85,8 +85,8 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 					<div class="caption">
 						<h3>' . $row['game_appid'] . '</h3>
 						<h3>' . $row['gamename'] . '</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione labore dignissimos repellendus repudiandae. </p>
-						<p><a class="btn btn-primary" href="">Learn More</a></p>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/' . $row['game_appid'] . '"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary" href="javascript:void(0)" onclick="game_add(' . $row['game_appid'] . ')">將遊戲加入興趣清單</a></p>
 					</div>
 				</div>
 			</div>';
@@ -167,8 +167,8 @@ if ($game_search_result_num > 0) {
 					<div class="caption">
 						<h3>' . $row['game_appid'] . '</h3>
 						<h3>' . $row['gamename'] . '</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione labore dignissimos repellendus repudiandae. </p>
-						<p><a class="btn btn-primary" href="">Learn More</a></p>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/' . $row['game_appid'] . '"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary" href="javascript:void(0)" onclick="game_add(' . $row['game_appid'] . ')">將遊戲加入興趣清單</a></p>
 					</div>
 				</div>
 			</div>';
@@ -341,8 +341,8 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 					<div class="caption">
 						<h3>' . $row['game_appid'] . '</h3>
 						<h3>' . $row['gamename'] . '</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione labore dignissimos repellendus repudiandae. </p>
-						<p><a class="btn btn-primary" href="">Learn More</a></p>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/' . $row['game_appid'] . '"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary" href="javascript:void(0)" onclick="game_add(' . $row['game_appid'] . ')">將遊戲加入興趣清單</a></p>
 					</div>
 				</div>
 			</div>';
@@ -416,8 +416,8 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 					<div class="caption">
 						<h3>' . $row['game_appid'] . '</h3>
 						<h3>' . $row['gamename'] . '</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione labore dignissimos repellendus repudiandae. </p>
-						<p><a class="btn btn-primary" href="">Learn More</a></p>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/' . $row['game_appid'] . '"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary" href="javascript:void(0)" onclick="game_add(' . $row['game_appid'] . ')">將遊戲加入興趣清單</a></p>
 					</div>
 				</div>
 			</div>';
@@ -501,8 +501,8 @@ $row_count = $row_layout_num;
 					<div class="caption">
 						<h3>' . $row['game_appid'] . '</h3>
 						<h3>' . $row['gamename'] . '</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione labore dignissimos repellendus repudiandae. </p>
-						<p><a class="btn btn-primary" href="">Learn More</a></p>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/' . $row['game_appid'] . '"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary" href="javascript:void(0)" onclick="game_add(' . $row['game_appid'] . ')">將遊戲加入興趣清單</a></p>
 					</div>
 				</div>
 			</div>';

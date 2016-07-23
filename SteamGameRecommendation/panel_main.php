@@ -28,10 +28,7 @@ require_once("login_double_check.php");
 <?php 
 require_once("header.php");
 ?>
-
 <div class="container">
-
-
 
 <!-- 標籤雲區塊 -->
 <div id="see-tag-cloud" class="lightbox">

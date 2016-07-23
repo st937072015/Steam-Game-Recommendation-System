@@ -427,17 +427,17 @@ ul.nav li.dropdown.open ul.dropdown-menu li a {
 .btn.btn-primary {
 	color: #fff;
 	text-shadow: 0 1px 1px rgba(0,0,0,.4);
-	background-color: #773141;
+	background-color: #009933;
 
 	-moz-box-shadow: 0 2px 2px rgba(0,0,0,.05), inset 0 -2px 0 rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.3);
 	-webkit-box-shadow: 0 2px 2px rgba(0,0,0,.05), inset 0 -2px 0 rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.3);
 	box-shadow: 0 2px 2px rgba(0,0,0,.05), inset 0 -2px 0 rgba(0,0,0,.12), inset 0 1px 0 rgba(255,255,255,.3);
 
-	border: 1px solid #5b2b2f;
+	border: 1px solid #339933;
 }
 
 .btn.btn-primary:hover {
-	background-color: #CE1141;
+	background-color: #33cc33;
 }
 
 .btn.btn-primary:active, .btn.btn-info:active, .btn.btn-success:active, .btn.btn-inverse:active, .btn.btn-warning:active, .btn.btn-danger:active {

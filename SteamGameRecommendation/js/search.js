@@ -226,18 +226,62 @@ return false;
 
 
 
+}
 
 
+// <以下為將有興趣之遊戲加入清單功能--------------------------------------------------------------------------------------------------->
+
+function game_add(appid){
 
 
+var tag_search = tag_name;
 
+
+//alert(tag_search);
+
+$.ajax({
+	url: "key_word_search.php",
+	type: "POST",
+	data: {tag_search: tag_search},
+	cache: false,
+	 beforeSend:function()
+	{
+			
+   $("#search-output").hide();
+   $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
+    
+	}
+})
+.done(function(page_search_output) {
+	console.log("page_search_output");
+    
+  
+//alert(page_search_output);
+     
+
+    $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
+    $("#search-output").html(page_search_output).show();
+
+    
+
+})
+.fail(function() {
+
+	console.log("error");
+
+})
+.always(function() {
+
+
+});
+
+return false;
 
 
 
 
 
 }
-
 
 
 
