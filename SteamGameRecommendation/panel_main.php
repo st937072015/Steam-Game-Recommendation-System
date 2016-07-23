@@ -52,7 +52,7 @@ $game_tag_result = mysqli_query($conn, $game_tag_query);
 while ($row = mysqli_fetch_array($game_tag_result)) {
 
 
-echo '<div class="tag-page-style small-card-background featherlight-close"><a href="javascript:void(0)" onclick=tag_page("' . $row['tag_name'] . '")>' . $row['tag_name'] . '</a></div>';
+echo '<div class="tag-page-style small-card-background featherlight-close"><a href="javascript:void(0)" onclick="tag_page(\'' . addslashes($row['tag_name']) . '\')">' . $row['tag_name'] . '</a></div>';
 
 
 
@@ -81,7 +81,7 @@ echo '<div class="tag-page-style small-card-background featherlight-close"><a hr
 <button id="see-all-game" class="btn btn-large btn-inverse"><i class="fa fa-search"></i>看全部遊戲</button>
 </div>
 <div class="row">
-<button class="btn btn-large btn-inverse" data-featherlight="#see-tag-cloud"><i class="fa fa-cloud"></i>選擇標籤雲</button>
+<button class="btn btn-large btn-inverse" data-featherlight="#see-tag-cloud"><i class="fa fa-search"></i>選擇標籤雲</button>
 </div>
 </form>
 </center>
