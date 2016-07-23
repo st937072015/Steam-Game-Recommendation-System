@@ -182,7 +182,7 @@ function tag_page(tag_name){
 var tag_search = tag_name;
 
 
-alert(tag_search);
+//alert(tag_search);
 
 $.ajax({
 	url: "key_word_search.php",
@@ -201,7 +201,7 @@ $.ajax({
 	console.log("page_search_output");
     
   
-alert(page_search_output);
+//alert(page_search_output);
      
 
     $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
