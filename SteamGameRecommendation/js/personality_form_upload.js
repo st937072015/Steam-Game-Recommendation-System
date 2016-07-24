@@ -13,7 +13,8 @@ $.ajax({
 	 beforeSend:function()
 	{
 			
-   $(".loading").css({"color": "#CE1141", "font-size": "16px"}).show();
+   $("#upload-status").hide();
+   $("#st-loader").show();
     
 	}
 })
@@ -22,10 +23,25 @@ $.ajax({
     
     alert(upload_output);
 
-    
+    if(upload_output == "file upload success"){
 
-    $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
-    $("#upload-status").html(upload_output).show();
+    $("#st-loader").hide();
+
+    swal("上傳成功", "測驗圖片已上傳成功囉!","success");
+
+    $("#personality-test-section").remove();
+    $("#upload-status").html('<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">您的人格特質心理測驗已經完成並上傳過結果囉!</h1></center>').show();
+
+  }else{
+
+
+    swal("上傳發生問題", "有可能是非法檔案格式或是上傳圖片size過大，有問題請聯繫本推薦系統管理員!","error");
+
+
+  	}
+
+
+
 
 })
 .fail(function() {

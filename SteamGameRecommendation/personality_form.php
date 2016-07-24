@@ -1,6 +1,7 @@
 <?php 
 require_once("mysql_con.php");
 require_once("login_double_check.php");
+require_once("test_status.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,15 +15,11 @@ require_once("login_double_check.php");
 	<link rel="stylesheet" href="css/panel_style.css">
 	<link rel="stylesheet" href="css/notify_style.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
-	<link rel="stylesheet" href="css/animate.css">
-	<link rel="stylesheet" href="css/featherlight.min.css">
 	<link rel="stylesheet" href="css/sweetalert.css">
 
     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
-    <script src="js/featherlight.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
-    <script src="js/game_remove.js"></script>
     <script src="js/personality_form_upload.js"></script>
    
 
@@ -33,7 +30,25 @@ require_once("header.php");
 ?>
 <div class="container">
 
-<div class="row">
+<div class="st-loader"><span class="equal"><center><h3>上傳中</h3></center></span></div>
+
+
+<div id="upload-status">
+
+<?php 
+
+
+
+$user_id = $_SESSION['user_id'];
+
+
+$row = test_finish_status($user_id, $conn);
+
+
+
+if ($row['personality_form_finish'] != 1) {
+	
+echo '<div id = "personality-test-section" class="row">
 <div class="span12">
 
 <div class="hero-unit">
@@ -54,8 +69,6 @@ require_once("header.php");
 <button type="submit" class="btn btn-large btn-inverse"><i class="fa fa-cloud-upload"></i> 上傳心理測驗結果</button>
 
 
-
-
 </form>
 
 
@@ -66,11 +79,31 @@ require_once("header.php");
 
 
 	</div>
-     </div>
+     </div>';
 
 
-<center class="loading"><i class="fa fa-spinner fa-spin fa-5x"></i></center>
-<div id="upload-status">
+
+}else{
+
+
+
+
+
+echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">您的人格特質心理測驗已經完成並上傳過結果囉!</h1></center>';
+
+
+
+}
+
+
+
+
+
+ ?>
+
+
+</div>
+
 	</div> <!-- /container -->
 
 </body>

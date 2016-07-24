@@ -145,6 +145,7 @@ color: #0174DF;
   }
 }
 .st-loader {
+  color: #f80;	
   width: 10em;
   height: 2.5em;
   position: absolute;
@@ -152,6 +153,7 @@ color: #0174DF;
   left: 50%;
   margin: -1.25em 0 0 -5em;
   box-sizing: border-box;
+  display: none;
 }
 
 .st-loader:before,

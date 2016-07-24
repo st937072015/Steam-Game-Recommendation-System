@@ -1,7 +1,7 @@
 <?php 
 
 // 從資料庫查詢並回傳受測者之所有受測進度狀態
-function test_finish_status($user_id,$conn){
+function test_finish_status($user_id, $conn){
    
 
 $status_query = "SELECT user_id, personality_form_finish, good_or_bad1, test1_finish, good_or_bad2, test2_finish FROM user_account_table WHERE user_id = '".$user_id."'";
@@ -19,6 +19,10 @@ return $row;
 
 
 
+}else{
+
+return false;
+
 }
 
 
@@ -33,16 +37,23 @@ function test_update_status($user_id, $var_string, $conn){
 
 $status_update = "UPDATE user_account_table SET ".$var_string." = 1 WHERE user_id = $user_id";
 
-echo $status_update;
 
 if (mysqli_query($conn, $status_update)) {
 
-	echo '更新完成';
+  return true;
+
+}else{
+
+
+  return false;
+
+
 
 }
 
 
 }
+
 
 
 
