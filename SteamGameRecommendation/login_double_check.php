@@ -58,7 +58,6 @@ if (!isset($_SESSION['level']) || ($_SESSION['level'] != "標準Steam玩家"  &&
   </body>
 </html>";
 
- header('Location: index.php'); 
 
  exit;
 

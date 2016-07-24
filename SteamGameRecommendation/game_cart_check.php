@@ -133,16 +133,23 @@ if ($game_remove_result_num == 1) {
   $count = count($_SESSION['fav_cart']);
 
 
-  if ($count > 0) {
+  if ($count > 0 && array_key_exists($row['gamename'], $_SESSION['fav_cart'])) {
   	
   unset($_SESSION['fav_cart'][$row['gamename']]);
   
   echo 'remove success';
 
-  }else{
+  }else if(!array_key_exists($row['gamename'], $_SESSION['fav_cart'])){
 
   
+ echo 'game is empty';
+
+
+  }else{
+
+
   echo 'remove fail';
+
 
 
   }

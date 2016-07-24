@@ -31,7 +31,7 @@ $.ajax({
 
     if (game_remove_output == "remove success") {
 
-    swal("移除成功，1秒後自動重新整理", "此遊戲已經從您的興趣清單中移除掉囉!", "success");
+    swal("移除成功，1秒後頁面自動刷新", "此遊戲已經從您的興趣清單中移除掉囉!", "success");
 
     setTimeout(function(){
     location.reload();
@@ -44,12 +44,21 @@ $.ajax({
 
 
 
-    swal("移除失敗", "您的興趣清單的遊戲是空的!", "error");
+    swal("移除失敗，1秒後頁面自動刷新", "您的興趣清單的遊戲是空的!", "error");
 
     setTimeout(function(){
     location.reload();
     },1000);
 
+
+
+    }else if(game_remove_output == "game is empty"){
+
+    swal("移除失敗，1秒後頁面自動刷新", "此遊戲已經不存在於您的興趣清單之中!", "error");
+
+    setTimeout(function(){
+    location.reload();
+    },1000);
 
 
     }else{

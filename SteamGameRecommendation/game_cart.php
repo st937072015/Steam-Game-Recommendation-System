@@ -178,7 +178,7 @@ $row_count--;
 
 
 
-	</div> <!-- search-output -->
+	</div> <!-- list-output -->
 
 		
 
