@@ -30,10 +30,13 @@ $count = count($_SESSION['fav_cart']);
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/featherlight.min.css">
+	<link rel="stylesheet" href="css/sweetalert.css">
 
     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
     <script src="js/featherlight.min.js"></script>
+    <script src="js/sweetalert.min.js"></script>
+    <script src="js/game_remove.js"></script>
    
 
 </head>
@@ -60,7 +63,7 @@ require_once("header.php");
 
 
 <center class="loading"><i class="fa fa-spinner fa-spin fa-5x"></i></center>
-<div id="search-output">
+<div id="list-output">
 
 
 
@@ -123,7 +126,7 @@ $row_count = $row_layout_num;
 
    $sql_append = $sql_append. ' LIMIT '.$start_index.',4';
 
-   echo $sql_append ;
+   //echo $sql_append ;
 
    echo'<div class="row">';
    // 每一列只限制輸出4筆所查詢到的遊戲資訊

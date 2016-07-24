@@ -255,7 +255,7 @@ $.ajax({
 	console.log("game_add_output");
     
   
-alert(game_add_output);
+//alert(game_add_output);
      
 
     $(".loading").css({"color": "#CE1141", "font-size": "16px"}).hide();
@@ -268,11 +268,23 @@ alert(game_add_output);
     }else if(game_add_output == "fail"){
 
 
-   swal("加入失敗", "此遊戲您已經加入過囉!", "error");
+    swal("加入失敗", "此遊戲您已經加入過囉!", "error");
 
+
+
+    }else if(game_add_output == "overload"){
+
+   swal("加入失敗", "您的加入遊戲數量已經達到數量門檻值10筆囉!", "error");
+    
+
+    }else{
+
+
+    $("#list-output").html(game_add_output).show();
 
 
     }
+    
      
     
 
@@ -294,8 +306,6 @@ return false;
 
 
 }
-
-
 
 
 
