@@ -4,7 +4,7 @@
 function test_finish_status($user_id, $conn){
    
 
-$status_query = "SELECT user_id, personality_form_finish, good_or_bad1, test1_finish, good_or_bad2, test2_finish FROM user_account_table WHERE user_id = '".$user_id."'";
+$status_query = "SELECT user_id, personality_form_finish, good_or_bad1, txt_upload, good_or_bad2 FROM user_account_table WHERE user_id = '".$user_id."'";
 
 $status_result_data = mysqli_query($conn, $status_query);
 

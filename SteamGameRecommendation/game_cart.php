@@ -1,7 +1,7 @@
 <?php 
 require_once("mysql_con.php");
 require_once("login_double_check.php");
-
+require_once("test_status.php");
 
 $count = count($_SESSION['fav_cart']);
 
@@ -64,6 +64,14 @@ require_once("header.php");
 
 
 <?php 
+
+$user_id = $_SESSION['user_id'];
+
+$row = test_finish_status($user_id, $conn);
+
+if ($row['good_or_bad1'] == 0) {
+
+
 
 // 若已有將挑選遊戲加入了遊戲清單
 if ($count > 0) {
@@ -167,6 +175,15 @@ $row_count--;
 
 }
 
+
+}else{
+
+
+
+echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">您的遊戲推薦測驗第一階段已經完成過囉!請您接下來等候第二階段的測驗!非常感謝您的參與!</h1></center>';
+
+
+}
 
  ?>
 
