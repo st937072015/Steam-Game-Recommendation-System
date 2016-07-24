@@ -38,6 +38,8 @@
     <div id="receive-status" ></div>
     <input type="text" placeholder="收件人暱稱或姓氏" name="nickname" />
     <div id="nickname-status" ></div>
+    <input type="text" placeholder="臉書帳號，有問題方便聯繫用" name="fb" />
+    <div id="fb-status" ></div>
     <input type="text" placeholder="電子信箱 (*等同登入帳號*)" name="re_username" />
     <div id="re-username-status" ></div>
     <input type="password" placeholder="密碼" name="re_password" />

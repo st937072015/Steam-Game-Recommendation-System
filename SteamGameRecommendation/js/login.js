@@ -203,18 +203,26 @@ $("#steam-account-status").attr("class", "account-ststus-error").text("steam帳�
 
 }	
 
+// fb帳號填寫驗證 狀態不為9皆不合法
+if (register_check[7] != 9) {
+
+$("#fb-status").attr("class", "account-ststus-error").text("臉書帳號不可空白").slideDown("fast");
+
+}	
+
+
 // 註冊帳號驗證 狀態不為9皆不合法
-if (register_check[7] == 0) {
+if (register_check[8] == 0) {
 
 $("#re-username-status").attr("class", "account-ststus-error").text("註冊帳號不可空白").slideDown("fast");
 
-}else if (register_check[7] == 1) {
+}else if (register_check[8] == 1) {
 
 
 $("#re-username-status").attr("class", "account-ststus-error").text("電子郵件帳號格式不合法").slideDown("fast");
 
 
-}else if (register_check[7] == 2) {
+}else if (register_check[8] == 2) {
 
 
 $("#re-username-status").attr("class", "account-ststus-error").text("此電子郵件帳號已經被別人使用囉").slideDown("fast");
@@ -223,7 +231,7 @@ $("#re-username-status").attr("class", "account-ststus-error").text("此電子�
 }
 
 // 密碼填寫驗證 狀態不為9皆不合法
-if (register_check[8] != 9) {
+if (register_check[9] != 9) {
 
 $("#re-password-status").attr("class", "account-ststus-error").text("密碼不可空白").slideDown("fast");
 
@@ -231,12 +239,12 @@ $("#re-password-status").attr("class", "account-ststus-error").text("密碼不�
 
 
 // 會員註冊是否成功驗證 狀態不為9皆不合法
-if (register_check[9] == 9) {
+if (register_check[10] == 9) {
 
 $("#join-status").attr("class", "join-status-success").text("恭喜，此帳號已註冊成功!").show("fast");
 
 
-}else if (register_check[9] == 0){
+}else if (register_check[10] == 0){
 
 
 

@@ -4,8 +4,8 @@ require_once("mysql_con.php");
 
 
 // 驗證註冊表單填寫狀況
-// (性別, 年齡, 禮券收件地址, 暱稱姓氏, 學歷, 同意協議, steam帳號, email帳號, 密碼)
-$reg_check = array(null, null, null, null, null, null, null, null, null, null);
+// (性別, 年齡, 禮券收件地址, 暱稱姓氏, 學歷, 同意協議, steam帳號, fb帳號,email帳號, 密碼)
+$reg_check = array(null, null, null, null, null, null, null, null, null, null, null);
 
 // 性別驗證
 if ($_POST['gender'] == null) {
@@ -97,14 +97,26 @@ $reg_check[6] = 9;
 
 }
 
-// 註冊帳號填寫檢查
-if ($_POST['re_username'] == null) {
+// fb帳號檢查
+if ($_POST['fb'] == null) {
 
 $reg_check[7] = 0;
 
+}else{
+
+$reg_check[7] = 9;
+
+
+}
+
+// 註冊帳號填寫檢查
+if ($_POST['re_username'] == null) {
+
+$reg_check[8] = 0;
+
 }else if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/",$_POST['re_username'])) {
 
-$reg_check[7] = 1;
+$reg_check[8] = 1;
 	
 }else{
 
@@ -121,12 +133,12 @@ $username_result_num = mysqli_num_rows($username_result_data);
  if (!$username_result_num  > 0) {
 	
 
-$reg_check[7] = 9;
+$reg_check[8] = 9;
     
 
  }else{
 
-$reg_check[7] = 2;
+$reg_check[8] = 2;
 
 
   }
@@ -137,11 +149,11 @@ $reg_check[7] = 2;
 // 註冊密碼填寫檢查
 if ($_POST['re_password'] == null) {
 
-$reg_check[8] = 0;
+$reg_check[9] = 0;
 
 }else{
 
-$reg_check[8] = 9;
+$reg_check[9] = 9;
 
 }
 
@@ -150,7 +162,9 @@ $reg_check[8] = 9;
 
 
 
-if ($reg_check[0] == 9 && $reg_check[1] == 9 && $reg_check[2] == 9 && $reg_check[3] == 9 && $reg_check[4] == 9 && $reg_check[5] == 9 && $reg_check[6] == 9 && $reg_check[7] == 9 && $reg_check[8] == 9) {
+
+
+if ($reg_check[0] == 9 && $reg_check[1] == 9 && $reg_check[2] == 9 && $reg_check[3] == 9 && $reg_check[4] == 9 && $reg_check[5] == 9 && $reg_check[6] == 9 && $reg_check[7] == 9 && $reg_check[8] == 9 && $reg_check[9] == 9) {
 	
 
 // 預防SQL Injection
@@ -167,6 +181,8 @@ $career = mysqli_real_escape_string($conn, $_POST['career']);
 $agree = mysqli_real_escape_string($conn, $_POST['agree']);
 
 $steam_account = mysqli_real_escape_string($conn, $_POST['steam_account']);
+
+$fb = mysqli_real_escape_string($conn, $_POST['fb']);
 
 $re_password = md5(mysqli_real_escape_string($conn, $_POST['re_password']));
 
@@ -202,14 +218,14 @@ if (!empty($_SERVER["HTTP_CLIENT_IP"])){
 
 
 // 進行新會員資料寫入資料庫
-$register_query = "INSERT INTO user_account_table(username,password,gender,nickname,age,level,agreement,career,steam_account,address,ip) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$career','$steam_account','$zone_address','$ip')";
+$register_query = "INSERT INTO user_account_table(username,password,gender,nickname,age,level,agreement,career,steam_account,fb_account,address,ip) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$career','$steam_account', '$fb','$zone_address','$ip')";
 
 mysqli_query($conn, $register_query);
 
    // 註冊成功與否狀態
    if (mysqli_affected_rows($conn) == 1) {
 
-   $reg_check[9] = 9;
+   $reg_check[10] = 9;
 
 
 
@@ -236,7 +252,7 @@ $mail_content = $nickname . '，受測者，您好！' . '非常感謝您抽空�
    }else{
 
 
-   $reg_check[9] = 0;
+   $reg_check[10] = 0;
    
    echo json_encode($reg_check);
 
