@@ -3,10 +3,6 @@ require_once("mysql_con.php");
 require_once("login_double_check.php");
 
 
-session_start();
-
-
-
 $count = count($_SESSION['fav_cart']);
 
 

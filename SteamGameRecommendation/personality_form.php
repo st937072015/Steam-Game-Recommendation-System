@@ -1,7 +1,7 @@
 <?php 
 require_once("mysql_con.php");
 require_once("login_double_check.php");
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,6 +23,7 @@ require_once("login_double_check.php");
     <script src="js/featherlight.min.js"></script>
     <script src="js/sweetalert.min.js"></script>
     <script src="js/game_remove.js"></script>
+    <script src="js/personality_form_upload.js"></script>
    
 
 </head>
@@ -38,7 +39,26 @@ require_once("header.php");
 <div class="hero-unit">
 <center>
 <h1>以下為人格特質心理測驗網址</h1>
-<a class="steam-index" href="http://meetype.com/bigfive-test" target="_blank"><h2>請按此</h2></a>
+<a class="steam-index" href="http://meetype.com/bigfive-test" target="_blank"><h2>開始心理測驗</h2></a>
+
+<form id="upload_personality_form" method="post" enctype="multipart/form-data">
+
+
+<div class="row">
+<div class="span12">
+<input type="file" name="file" id="file" required />
+</div>
+</div>
+
+
+<button type="submit" class="btn btn-large btn-inverse"><i class="fa fa-cloud-upload"></i> 上傳心理測驗結果</button>
+
+
+
+
+</form>
+
+
 </center>
 
 
@@ -50,6 +70,7 @@ require_once("header.php");
 
 
 <center class="loading"><i class="fa fa-spinner fa-spin fa-5x"></i></center>
+<div id="upload-status">
 	</div> <!-- /container -->
 
 </body>

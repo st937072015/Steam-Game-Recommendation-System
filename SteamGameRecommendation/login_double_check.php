@@ -20,7 +20,7 @@ $row = mysqli_fetch_assoc($result_data);
 $result_num = mysqli_num_rows($result_data);
 
 
-if (!isset($_SESSION['level']) || ($_SESSION['level'] != "標準Steam玩家"  && $_SESSION['level'] != "一般玩家") || !isset($_SESSION['username']) || $result_num != 1 || !isset($_SESSION['level']) || $_SESSION['level'] == null || $_SESSION['username'] == null || !isset($_SESSION['nickname'])|| $_SESSION['nickname'] == null) {
+if (!isset($_SESSION['level']) || ($_SESSION['level'] != "標準Steam玩家"  && $_SESSION['level'] != "一般玩家") || !isset($_SESSION['username']) || $result_num != 1 || !isset($_SESSION['level']) || $_SESSION['level'] == null || $_SESSION['username'] == null || !isset($_SESSION['nickname'])|| $_SESSION['nickname'] == null || !isset($_SESSION['user_id']) || $_SESSION['user_id'] == null) {
 
 
   echo "<!DOCTYPE html>

@@ -32,7 +32,7 @@ $username = mysqli_real_escape_string($conn, $_POST['lo_username']);
 $password = mysqli_real_escape_string($conn, md5($_POST['lo_password']));
 
 
-$login_query = "SELECT username, password, level, nickname FROM user_account_table WHERE username = '$username' AND password = '$password'";
+$login_query = "SELECT user_id, username, password, level, nickname FROM user_account_table WHERE username = '$username' AND password = '$password'";
 
 $result_data = mysqli_query($conn, $login_query);
 
@@ -43,6 +43,8 @@ $row = mysqli_fetch_array($result_data);
 
 // 驗證帳號是否存在且合法
 if ($result_num == 1 && $row['username'] == $_POST['lo_username'] && $row['password'] == md5($_POST['lo_password'])) {
+    
+    $_SESSION['user_id'] = $row['user_id'];
 
 	$_SESSION['username'] = $row['username'];
 
