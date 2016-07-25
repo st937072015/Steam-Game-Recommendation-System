@@ -4,9 +4,11 @@ require_once("login_double_check.php");
 require_once("step1_test_function.php");
 require_once("upload_file_function.php");
 require_once("json_write_file_function.php");
+require_once("check_file_function.php");
 
+$user_id = $_SESSION['user_id'];
 
-if (isset($_POST['start_test1']) && count($_SESSION['fav_cart']) > 0) {
+if (isset($_POST['start_test1']) && count($_SESSION['fav_cart']) > 0 && !check_file_exist($user_id, 'record') && !check_file_exist($user_id, 'rate')) {
 	
 $fav_game_array = $_SESSION['fav_cart'];
 
@@ -183,7 +185,7 @@ unset($sum3_4);
 
 
 // 將結果寫入json檔並輸出
-if (write_json_file($user_id, 'record_', $record) && write_json_file($user_id, 'fav_', array_flip($fav_game_array))) {
+if (write_json_file($user_id, 'record', $record) && write_json_file($user_id, 'fav', array_flip($fav_game_array))) {
 
 
   $set_test1_finish_query = "UPDATE user_account_table SET test1_finish = 1 WHERE user_id = '" .$user_id. "'";
@@ -238,6 +240,15 @@ unset($score3_4);
 
 
 
+
+
+
+
+}else{
+
+
+
+echo '受測結果數據紀錄檔案發生錯誤';
 
 
 

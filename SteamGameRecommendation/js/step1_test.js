@@ -20,18 +20,31 @@ $.ajax({
 			
    $("#test1-output").hide();
    $(".st-loader").show();
-    
+   $("#start-test1-button").hide();
+       
 	}
 })
 .done(function(test1_output) {
 	console.log("test1_output");
     
-    alert(test1_output);
+    //alert(test1_output);
 
     
+if (test1_output == "受測結果數據紀錄檔案發生錯誤") {
+
+    $(".st-loader").hide();
+
+   swal("發生錯誤", "請聯繫本系統管理員!", "error");
+
+
+}else{
 
     $(".st-loader").hide();
     $("#test1-output").html(test1_output).show();
+
+
+}
+
 
 
 })
@@ -41,7 +54,7 @@ $.ajax({
 
 })
 .always(function() {
-
+$("#start-test1-button").show();
 
 });
 
