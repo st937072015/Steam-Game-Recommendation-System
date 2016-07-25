@@ -8,7 +8,7 @@ require_once("check_file_function.php");
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Bootstrap template</title>
+	<title>Steam Game Recommendation System</title>
 
 	<link rel="shortcut icon" href="img/notify/favicon.ico"> 
 	<link rel="stylesheet" href="css/bootstrap.css">

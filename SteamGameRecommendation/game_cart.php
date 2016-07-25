@@ -17,7 +17,7 @@ $count = count($_SESSION['fav_cart']);
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>Bootstrap template</title>
+	<title>Steam Game Recommendation System</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
