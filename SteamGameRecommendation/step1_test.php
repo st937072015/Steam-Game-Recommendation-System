@@ -53,8 +53,6 @@ require_once("header.php");
 <?php  
 $user_id = $_SESSION['user_id'];
 
-// 遊戲清單遊戲總數量
-$count = count($fav_game_array);
 
 if (!check_file_exist($user_id, 'rate') && check_file_exist($user_id, 'record')) {
 
@@ -85,7 +83,7 @@ echo '<center>
 
 
 
-}else if($count == 0){
+}else if($_SESSION['fav_cart'] == 0){
 
 
 echo '<center>
