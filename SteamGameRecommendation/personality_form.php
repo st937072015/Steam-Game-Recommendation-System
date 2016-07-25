@@ -60,9 +60,9 @@ echo '<div id = "personality-test-section" class="row">
 
 
 <div class="row">
-<div class="span12">
-<input type="file" name="file" id="file" required />
-</div>
+
+<input type="file" name="file" id="file"/>
+
 </div>
 
 
