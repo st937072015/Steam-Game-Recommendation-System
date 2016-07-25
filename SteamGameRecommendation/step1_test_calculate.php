@@ -185,7 +185,7 @@ unset($sum3_4);
 
 
 // 將結果寫入json檔並輸出
-if (write_json_file($user_id, 'record', $record) && write_json_file($user_id, 'fav', array_flip($fav_game_array))) {
+if (write_json_file($user_id, 'record', $record)) {
 
 
   $set_test1_finish_query = "UPDATE user_account_table SET test1_finish = 1 WHERE user_id = '" .$user_id. "'";
