@@ -83,7 +83,7 @@ echo '<center>
 
 
 
-}else if($_SESSION['fav_cart'] == 0){
+}else if(count($_SESSION['fav_cart']) == 0){
 
 
 echo '<center>

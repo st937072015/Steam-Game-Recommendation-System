@@ -39,9 +39,15 @@ if (test1_output == "受測結果數據紀錄檔案發生錯誤") {
 
 }else{
 
-    $(".st-loader").hide();
-    $("#test1-output").html(test1_output).show();
+	$("#start-test1-button").remove();
 
+    $(".st-loader").hide();
+
+   swal("演算法計算完成，1秒後頁面自動刷新", "非常感謝您來幫忙受測，接著就要請您給與各個結果評分囉!", "success");
+   
+   setTimeout(function(){
+    location.reload();
+    },1000);
 
 }
 
@@ -54,7 +60,7 @@ if (test1_output == "受測結果數據紀錄檔案發生錯誤") {
 
 })
 .always(function() {
-$("#start-test1-button").show();
+
 
 });
 
@@ -85,10 +91,10 @@ $.ajax({
 })
 .done(function(rate_data) {
 	
-alert(rate_data);
+//alert(rate_data);
 
 
-
+$(".st-loader").hide();
 
 
 if (rate_data=="success") {

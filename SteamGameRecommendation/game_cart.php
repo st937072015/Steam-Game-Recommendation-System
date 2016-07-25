@@ -1,7 +1,8 @@
 <?php 
 require_once("mysql_con.php");
 require_once("login_double_check.php");
-require_once("test_status.php");
+require_once("check_file_function.php");
+
 
 $count = count($_SESSION['fav_cart']);
 
@@ -67,9 +68,8 @@ require_once("header.php");
 
 $user_id = $_SESSION['user_id'];
 
-$row = test_finish_status($user_id, $conn);
 
-if ($row['good_or_bad1'] == 0) {
+if (!check_file_exist($user_id, 'record')) {
 
 
 
