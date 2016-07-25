@@ -21,7 +21,7 @@ $.ajax({
 .done(function(upload_output) {
 	console.log("upload_output");
     
-    alert(upload_output);
+    //alert(upload_output);
 
     if(upload_output == "file upload success"){
 

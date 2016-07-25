@@ -1,5 +1,6 @@
 <?php 
 require_once "mysql_con.php";
+require_once("login_double_check.php");
 
 // 加入遊戲之功能<-------------------------------------------------------------------------------->
 if (isset($_POST['add_game']) && $_POST['add_game'] != null && !isset($_POST['remove_game'])) {
@@ -23,7 +24,6 @@ $row = mysqli_fetch_assoc($game_add_result);
 // 判斷傳來的遊戲資料是否為資料庫中的(安全性)
 if ($game_add_result_num == 1) {
 
-	session_start();
   
   // 已加入之遊戲總數量
   $count = count($_SESSION['fav_cart']);
@@ -73,17 +73,10 @@ if ($game_add_result_num == 1) {
 
 }else{
 
- echo '
-  <div class="info">
-    <h1>請勿從事非法活動，謝謝。</h1>
-  </div>
-</div>
 
-<div class="form">
-  
-<img src="img/notify/warning.png" height="250" width="300">
 
-</div>';
+
+echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">請勿從事非法活動，謝謝!</h1></center>';
 
 
 
@@ -142,7 +135,7 @@ if ($game_remove_result_num == 1) {
   }else if(!array_key_exists($row['gamename'], $_SESSION['fav_cart'])){
 
   
- echo 'game is empty';
+  echo 'game is empty';
 
 
   }else{
@@ -165,7 +158,7 @@ if ($game_remove_result_num == 1) {
 
 
 
-echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">Unfortunately, 請問從事非法活動，謝謝!</h1></center>';
+echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">請物從事非法活動，謝謝!</h1></center>';
 
 
 
@@ -189,7 +182,7 @@ echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 sty
 
 
 
-echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">Unfortunately, 請問從事非法活動，謝謝!</h1></center>';
+echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">請勿從事非法活動，謝謝!</h1></center>';
 
 
 

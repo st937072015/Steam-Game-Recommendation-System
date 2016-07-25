@@ -4,7 +4,7 @@ require_once("mysql_con.php");
 
 
 // 驗證註冊表單填寫狀況
-// (性別, 年齡, 禮券收件地址, 暱稱姓氏, 學歷, 同意協議, steam帳號, fb帳號,email帳號, 密碼)
+// (性別, 年齡, 禮券收件地址, 暱稱姓氏, 學歷, 同意協議, steam帳號, fb帳號, email帳號, 密碼)
 $reg_check = array(null, null, null, null, null, null, null, null, null, null, null);
 
 // 性別驗證
