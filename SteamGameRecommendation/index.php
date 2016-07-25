@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Steam Game Recommendation System</title>
     
-    
+<link rel="shortcut icon" href="img/notify/favicon.ico">   
 <link rel="stylesheet" href="css/login_reset.css">
 <link rel="stylesheet" href="css/login_style.css">
 <link rel="stylesheet" href="css/notify_style.css">
@@ -26,11 +26,11 @@
 
 <div class="container">
   <div class="info">
-    <h1>Flat Login Form</h1>
+    <h1>Steam Game Recommendation Research System</h1>
   </div>
 </div>
 <div class="form">
-  <div class="thumbnail"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/169963/hat.svg"/></div>
+  <div class="thumbnail"><img src="img/notify/Steam-icon.png"></div>
   <form class="register-form">
     <input type="text" placeholder="年齡" name="age" />
     <div id="age-status" ></div>

@@ -9,9 +9,9 @@ require_once("check_file_function.php");
 <head>
 	<meta charset="UTF-8">
 	<title>Bootstrap template</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
 
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+    <link rel="shortcut icon" href="img/notify/favicon.ico"> 
 	<link rel="stylesheet" href="css/panel_toggle_switch.css">
 	<link rel="stylesheet" href="css/panel_style.css">
 	<link rel="stylesheet" href="css/notify_style.css">
@@ -20,7 +20,7 @@ require_once("check_file_function.php");
 	<link rel="stylesheet" href="css/sweetalert.css">
 	<link rel="stylesheet" href="css/ion.tabs.css">
 	<link rel="stylesheet" href="css/ion.tabs.skinFlat.css">
-
+ 
     
     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
