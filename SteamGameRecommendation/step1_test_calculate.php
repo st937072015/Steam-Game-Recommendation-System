@@ -11,17 +11,14 @@ $fav_game_array = $_SESSION['fav_cart'];
 
 
 
-print_r(get_sum_json('json/a/c.json', $fav_game_array));
+$sum = get_sum_json('personality_score_json/a.json', $fav_game_array);
 
 
 
 
 
 
-
-
-
-
+print_r(score_rank('personality_score_json/a.json', $fav_game_array, $sum));
 
 
 
