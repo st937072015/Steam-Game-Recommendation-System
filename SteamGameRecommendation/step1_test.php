@@ -10,8 +10,8 @@ require_once("check_file_function.php");
 	<meta charset="UTF-8">
 	<title>Bootstrap template</title>
 
-
-    <link rel="shortcut icon" href="img/notify/favicon.ico"> 
+	<link rel="shortcut icon" href="img/notify/favicon.ico"> 
+	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/panel_toggle_switch.css">
 	<link rel="stylesheet" href="css/panel_style.css">
 	<link rel="stylesheet" href="css/notify_style.css">
@@ -53,7 +53,10 @@ require_once("header.php");
 <?php  
 $user_id = $_SESSION['user_id'];
 
-if (!check_file_exist($user_id, 'rate')) {
+// 遊戲清單遊戲總數量
+$count = count($fav_game_array);
+
+if (!check_file_exist($user_id, 'rate') && check_file_exist($user_id, 'record')) {
 
 
 echo '<center>
@@ -82,6 +85,23 @@ echo '<center>
 
 
 
+}else if($count == 0){
+
+
+echo '<center>
+
+
+<h1>您的有興趣之遊戲清單目前遊戲總數還是空的唷</h1>
+
+
+<form id="test1-form">
+
+</form>
+</center>';
+
+
+
+
 }else{
 
 
@@ -97,7 +117,6 @@ echo '<center>
 
 </form>
 </center>';
-
 
 
 
