@@ -16,12 +16,16 @@ require_once("login_double_check.php");
 	<link rel="stylesheet" href="css/font-awesome.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/sweetalert.css">
-	<link rel="stylesheet" href="css/tabs.css">
+	<link rel="stylesheet" href="css/ion.tabs.css">
+	<link rel="stylesheet" href="css/ion.tabs.skinFlat.css">
 
+    
     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
     <script src="js/sweetalert.min.js"></script>
     <script src="js/step1_test.js"></script>
+    <script src="js/ion.tabs.min.js"></script>
+
 
 
    
@@ -61,7 +65,7 @@ require_once("header.php");
 	</div>
      </div>
 
-<div class="st-loader"><span class="equal"><center><h3>運算中</h3></center></span></div>
+<div class="st-loader"><span class="equal"><center><h3>運算中，請稍待片刻。</h3></center></span></div>
 <div id="test1-output">
 <?php 
 
@@ -87,81 +91,215 @@ echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 sty
 
  </div> <!-- test1-output -->
 
- <center>    <div class="widget">
-  <ol class="widget-list" id="managers">
-    <li>
-      <a class="widget-list-link">
-        <img src="http://cdn.akamai.steamstatic.com/steam/apps/370240/header.jpg">
-        Manager cgfhfghfghfdgdfgdfgfgh
-      </a>
-    </li>
-    <li>
-      <a class="widget-list-link">
-             <img src="http://cdn.akamai.steamstatic.com/steam/apps/370240/header.jpg">
-        <h4>sdfsdfhgjghjghjgjhgjtyjtyjtyjtyjtyjhjkjkhjjkfghfghfghfghgg</h4>
-        <button onclick = window.open("http://cdn.akamai.steamstatic.com/steam/apps/370240/header.jpg") class="btn btn-primary btn-inverse"><h4>Steam遊戲商城連結</h4></button>
-      </a>
-    </li>
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/47?f=y&amp;s=64&amp;d=identicon">
-        Manager #3 <span>342 followers</span>
-      </a>
-    </li>
-  </ol>
+ 
 
-  <ol class="widget-list" id="designers">
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/5?f=y&amp;s=64&amp;d=identicon">
-        Designer #1 <span>481 followers</span>
-      </a>
-    </li>
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/5?f=y&amp;s=64&amp;d=identicon">
-        Designer #2 <span>5162 followers</span>
-      </a>
-    </li>
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/5?f=y&amp;s=64&amp;d=identicon">
-        Designer #3 <span>342 followers</span>
-      </a>
-    </li>
-  </ol>
+ <center>
+<div class="row">
 
-  <ol class="widget-list" id="developers">
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/6?f=y&amp;s=64&amp;d=identicon">
-        Developer #1 <span>481 followers</span>
-      </a>
-    </li>
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/6?f=y&amp;s=64&amp;d=identicon">
-        Developer #2 <span>5162 followers</span>
-      </a>
-    </li>
-    <li>
-      <a class="widget-list-link">
-        <img src="http://www.gravatar.com/avatar/6?f=y&amp;s=64&amp;d=identicon">
-        Developer #3 <span>342 followers</span>
-      </a>
-    </li>
-  </ol>
 
-  <ul class="widget-tabs">
-    <li class="widget-tab">
-      <a href="#managers" class="widget-tab-link">Managers</a>
-      <!-- Omitting the end tag is valid HTML and removes the space in-between inline blocks. -->
-    <li class="widget-tab">
-      <a href="#designers" class="widget-tab-link">Designers</a>
-    <li class="widget-tab">
-      <a href="#developers" class="widget-tab-link">Developers</a>
-  </ul>
+<div class="ionTabs" id="tabs_1" data-name="Tabs_Group_name">
+    <ul class="ionTabs__head">
+        <li class="ionTabs__tab" data-target="Tab_1_name">推薦結果1</li>
+        <li class="ionTabs__tab" data-target="Tab_2_name">推薦結果2</li>
+        <li class="ionTabs__tab" data-target="Tab_3_name">推薦結果3</li>
+        <li class="ionTabs__tab" data-target="Tab_4_name">推薦結果</li>
+        <li class="ionTabs__tab" data-target="Tab_5_name">推薦結果</li>
+        <li class="ionTabs__tab" data-target="Tab_6_name">推薦結果</li>
+        <li class="ionTabs__tab" data-target="Tab_7_name">推薦結果7</li>
+        <li class="ionTabs__tab" data-target="Tab_8_name">推薦結果8</li>
+        <li class="ionTabs__tab" data-target="Tab_9_name">推薦結果9</li>
+        <li class="ionTabs__tab" data-target="Tab_10_name">推薦結果10</li>
+        <li class="ionTabs__tab" data-target="Tab_11_name">推薦結果11</li>
+        <li class="ionTabs__tab" data-target="Tab_12_name">推薦結果12</li>
+    </ul>
+    <div class="ionTabs__body">
+        <div class="ionTabs__item" data-name="Tab_1_name">
+            
+
+                        <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+
+
+
+
+        </div>
+        <div class="ionTabs__item" data-name="Tab_2_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+        <div class="ionTabs__item" data-name="Tab_3_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+
+                <div class="ionTabs__item" data-name="Tab_4_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+
+
+                <div class="ionTabs__item" data-name="Tab_5_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+
+
+                <div class="ionTabs__item" data-name="Tab_6_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+
+
+                <div class="ionTabs__item" data-name="Tab_7_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+
+
+                <div class="ionTabs__item" data-name="Tab_8_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+
+
+                <div class="ionTabs__item" data-name="Tab_9_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+
+
+                <div class="ionTabs__item" data-name="Tab_10_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+
+
+                <div class="ionTabs__item" data-name="Tab_11_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+
+
+                <div class="ionTabs__item" data-name="Tab_12_name">
+                          <div class="animated fadeInLeft">
+				<div class="thumbnail small-card-background">
+					<img src="http://cdn.akamai.steamstatic.com/steam/apps/20/header.jpg">
+					<div class="caption">
+						<h3>5555</h3>
+						<h3>55555</h3>
+						<a class="steam-index" target="_blank" href="http://store.steampowered.com/app/30"><p>Steam商城遊戲產品詳細說明連結</p></a> 
+						<p><a class="btn btn-primary">將遊戲加入興趣清單</a></p>
+					</div>
+				</div>
+			</div>
+        </div>
+
+        <div class="ionTabs__preloader"></div>
+    </div>
 </div>
+
+</div>
+
+
 </center>
 		
 

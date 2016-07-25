@@ -107,4 +107,43 @@ return 'illegal file size or type';
 
 
 
+
+// 檢查受測者做的受測資料output是否有完整儲存存在
+
+function check_test_record_file($user_id, $file_name){
+
+
+if (file_exists('personality_member/'.$user_id. '/' .$file_name . $user_id. '.json')) {
+	
+
+   
+
+return true;
+
+
+
+}else{
+
+
+return false;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+
+
 ?>
