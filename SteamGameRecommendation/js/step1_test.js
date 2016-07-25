@@ -54,6 +54,67 @@ return false;
 
 
 
+// <以下為評分表單送出功能--------------------------------------------------------------------------------------------------->
+$("#rate_button").click(function() {
+
+
+$.ajax({
+	url: "rate_check.php",
+	type: "POST",
+	data: $("#rate").serialize(),
+	beforeSend:function()
+	{
+			
+   $("#rate_button").hide();
+   $(".st-loader").show();
+    
+	}
+})
+.done(function(rate_data) {
+	
+alert(rate_data);
+
+
+
+
+
+if (rate_data=="success") {
+
+
+swal("評分送出成功，1秒後頁面自動刷新", "非常感謝您參與第一階段的受測!您的參與促使本研究能有未來改進一步的發展與改進!", "success");
+
+    setTimeout(function(){
+    location.reload();
+    },1000);
+
+
+}else if(rate_data=="fail"){
+
+swal("評分送出發生問題", "發生錯誤，請聯繫本系統管理員!", "error");
+
+
+
+}
+
+
+
+
+
+})
+.fail(function() {
+	console.log("error");
+})
+.always(function() {
+
+   $(".st-loader").hide();
+});
+
+
+return false;
+
+
+});
+
 
 
 

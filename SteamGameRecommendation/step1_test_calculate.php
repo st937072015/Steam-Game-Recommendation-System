@@ -30,12 +30,10 @@ $score1_1 = score_rank('personality_score_json/none_review_merge/Rock_none_revie
 
 $record['Rock_none_review_merge'] = $score1_1;
 
-print_r($score1_1);
 
-echo '<br>';
 
 unset($sum1_1);
-unset($score1_1);
+
 
 
 
@@ -45,12 +43,10 @@ $score1_2 = score_rank('personality_score_json/none_user_merge/Rock_none_user_me
 
 $record['Rock_none_user_merge'] = $score1_2;
 
-print_r($score1_2);
 
-echo '<br>';
 
 unset($sum1_2);
-unset($score1_2);
+
 
 
 
@@ -60,12 +56,10 @@ $score1_3 = score_rank('personality_score_json/review_merge/Rock_review_merge.js
 
 $record['Rock_review_merge'] = $score1_3;
 
-print_r($score1_3);
 
-echo '<br>';
 
 unset($sum1_3);
-unset($score1_3);
+
 
 
 
@@ -75,12 +69,10 @@ $score1_4 = score_rank('personality_score_json/user_merge/Rock_user_merge.json',
 
 $record['Rock_user_merge'] = $score1_4;
 
-print_r($score1_4);
 
-echo '<br>';
 
 unset($sum1_4);
-unset($score1_4);
+
 
 
 
@@ -92,12 +84,10 @@ $score2_1 = score_rank('personality_score_json/none_review_merge/Mairesse_none_r
 
 $record['Mairesse_none_review_merge'] = $score2_1;
 
-print_r($score2_1);
 
-echo '<br>';
 
 unset($sum2_1);
-unset($score2_1);
+
 
 
 
@@ -107,12 +97,10 @@ $score2_2 = score_rank('personality_score_json/none_user_merge/Mairesse_none_use
 
 $record['Mairesse_none_user_merge'] = $score2_2;
 
-print_r($score2_2);
 
-echo '<br>';
 
 unset($sum2_2);
-unset($score2_2);
+
 
 
 $sum2_3 = get_sum_json('personality_score_json/review_merge/Mairesse_review_merge.json', $fav_game_array);
@@ -121,12 +109,10 @@ $score2_3 = score_rank('personality_score_json/review_merge/Mairesse_review_merg
 
 $record['Mairesse_review_merge'] = $score2_3;
 
-print_r($score2_3);
 
-echo '<br>';
 
 unset($sum2_3);
-unset($score2_3);
+
 
 
 $sum2_4 = get_sum_json('personality_score_json/user_merge/Mairesse_user_merge.json', $fav_game_array);
@@ -135,12 +121,10 @@ $score2_4 = score_rank('personality_score_json/user_merge/Mairesse_user_merge.js
 
 $record['Mairesse_user_merge'] = $score2_4;
 
-print_r($score2_4);
 
-echo '<br>';
 
 unset($sum2_4);
-unset($score2_4);
+
 
 
 
@@ -152,12 +136,10 @@ $score3_1 = score_rank('personality_score_json/none_review_merge/Chang_none_revi
 
 $record['Chang_none_review_merge'] = $score3_1;
 
-print_r($score3_1);
 
-echo '<br>';
 
 unset($sum3_1);
-unset($score3_1);
+
 
 
 $sum3_2 = get_sum_json('personality_score_json/none_user_merge/Chang_none_user_merge.json', $fav_game_array);
@@ -166,12 +148,10 @@ $score3_2 = score_rank('personality_score_json/none_user_merge/Chang_none_user_m
 
 $record['Chang_none_user_merge'] = $score3_2;
 
-print_r($score3_2);
 
-echo '<br>';
 
 unset($sum3_2);
-unset($score3_2);
+
 
 
 $sum3_3 = get_sum_json('personality_score_json/review_merge/Chang_review_merge.json', $fav_game_array);
@@ -180,12 +160,10 @@ $score3_3 = score_rank('personality_score_json/review_merge/Chang_review_merge.j
 
 $record['Chang_review_merge'] = $score3_3;
 
-print_r($score3_3);
 
-echo '<br>';
 
 unset($sum3_3);
-unset($score3_3);
+
 
 
 
@@ -195,30 +173,65 @@ $score3_4 = score_rank('personality_score_json/user_merge/Chang_user_merge.json'
 
 $record['Chang_user_merge'] = $score3_4;
 
-print_r($score3_4);
 
-echo '<br>';
+
 
 unset($sum3_4);
-unset($score3_4);
+
+
 
 
 
 // 將結果寫入json檔並輸出
-if (write_json_file($user_id, 'record_', $record) != true) {
+if (write_json_file($user_id, 'record_', $record) && write_json_file($user_id, 'fav_', array_flip($fav_game_array))) {
 
-	echo '寫入錯誤';
+
+  $set_test1_finish_query = "UPDATE user_account_table SET test1_finish = 1 WHERE user_id = '" .$user_id. "'";
+
+
+ mysqli_query($conn,$set_test1_finish_query);
+
+
+if (mysqli_affected_rows($conn) == 1) {
+
+   
+
+} else {
+
+   echo '受測結果數據紀錄檔案發生錯誤';
+
+}
+   
+
+	
+
+}else{
+
+
+echo '受測結果數據紀錄檔案發生錯誤';
+
+
 
 }
 
 
 
+// 釋放記憶體
+unset($record);
 
-
-
-
-
-
+// 釋放記憶體
+unset($score1_1);
+unset($score1_2);
+unset($score1_3);
+unset($score1_4);
+unset($score2_1);
+unset($score2_2);
+unset($score2_3);
+unset($score2_4);
+unset($score3_1);
+unset($score3_2);
+unset($score3_3);
+unset($score3_4);
 
 
 
@@ -230,6 +243,9 @@ if (write_json_file($user_id, 'record_', $record) != true) {
 
 
 }
+
+
+
 
 
 
