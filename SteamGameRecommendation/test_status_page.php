@@ -47,30 +47,28 @@ $row = test_finish_status($user_id, $conn);
 
 
 
-echo $row['txt_upload'];
-
 
 
 
 $status_percent = 0;
 
 if ($row['personality_form_finish'] == 1) {
-	$status_percent + 25;
+	$status_percent = $status_percent + 25;
 
 }
 
 if ($row['test1_finish'] == 1) {
-	$status_percent + 25;
+	$status_percent = $status_percent + 25;
 
 }
 
 if ($row['good_or_bad1'] == 1) {
-	$status_percent + 25;
+	$status_percent = $status_percent + 25;
 
 }
 
 if ($row['txt_upload'] == 1) {
-	$status_percent + 25;
+	$status_percent = $status_percent + 25;
 
 }
 

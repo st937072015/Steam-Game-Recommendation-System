@@ -2,7 +2,6 @@
 
 require_once("mysql_con.php");
 
-
 // 驗證註冊表單填寫狀況
 // (性別, 年齡, 禮券收件地址, 暱稱姓氏, 學歷, 同意協議, steam帳號, fb帳號, email帳號, 密碼)
 $reg_check = array(null, null, null, null, null, null, null, null, null, null, null);
@@ -215,10 +214,13 @@ if (!empty($_SERVER["HTTP_CLIENT_IP"])){
 
 }
 
+// 將現在系統時間設定為台北時間
+date_default_timezone_set('Asia/Taipei');
 
+$now_time = date('Y/m/d H:i:s');
 
 // 進行新會員資料寫入資料庫
-$register_query = "INSERT INTO user_account_table(username,password,gender,nickname,age,level,agreement,career,steam_account,fb_account,address,ip) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$career','$steam_account', '$fb','$zone_address','$ip')";
+$register_query = "INSERT INTO user_account_table(username,password,gender,nickname,age,level,agreement,career,steam_account,fb_account,address,ip,register_time) VALUES('$re_username','$re_password','$gender','$nickname','$age','$level','$agree','$career','$steam_account', '$fb','$zone_address','$ip','$now_time')";
 
 mysqli_query($conn, $register_query);
 
@@ -233,7 +235,7 @@ mysqli_query($conn, $register_query);
 require_once("sendmail_function.php");
 
 $sender_email ='st937072015@gmail.com';
-$sender_name = 'Steam社群平台遊戲推薦系統管理者';
+$sender_name = 'Steam社群平台遊戲推薦研究系統管理者';
 $receiver_email = $re_username;
 $receiver_name = $nickname . '，受測者';
 

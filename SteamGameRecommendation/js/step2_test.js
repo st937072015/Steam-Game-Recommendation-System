@@ -14,7 +14,7 @@ $.ajax({
 	{
 			
    $("#upload-status").hide();
-   $("#st-loader").show();
+   $(".st-loader").show();
     
 	}
 })
@@ -25,7 +25,7 @@ $.ajax({
 
     if(upload_output == "file upload success"){
 
-    $("#st-loader").hide();
+    $(".st-loader").hide();
 
     swal("上傳成功", "您的文字壓縮檔已上傳成功囉!","success");
 
@@ -37,6 +37,7 @@ $.ajax({
 
     swal("上傳發生問題", "有可能是非法檔案格式或是已經上傳過或是上傳檔案size過大，有問題請聯繫本推薦系統管理員!","error");
     $("#upload-status").show();
+    $(".st-loader").hide();
     
   	}
 

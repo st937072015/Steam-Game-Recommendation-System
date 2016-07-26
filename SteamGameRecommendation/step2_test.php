@@ -111,7 +111,7 @@ echo '<div id = "step2-test-section" class="row">
 
  ?>
 
-<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">受測階段2測驗功能需再擇日進行，需依受測階段一的整體進度而定受測時間。Coming Soon!</h1></center>;
+<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">受測階段2測驗功能需再擇日進行，需依受測階段1的整體進度而定受測時間。Coming Soon!</h1></center>;
 
 </div>
 

@@ -1,3 +1,35 @@
+<?php 
+
+require_once("mysql_con.php");
+
+$valid_query = "SELECT valid FROM user_account_table";
+
+
+$valid_result = mysqli_query($conn,$valid_query);
+
+// 註冊人數
+$register_num = mysqli_num_rows($valid_result);
+
+// 受測資格無效人數
+$problem_check_num = 0;
+
+while ($row = mysqli_fetch_array($valid_result)) {
+    
+if ($row['valid'] == 0) {
+
+$problem_check_num++;
+   
+}
+
+}
+   
+
+
+
+
+
+?>
+
 <!DOCTYPE html>
 <html >
   <head>
@@ -27,6 +59,8 @@
 <div class="container">
   <div class="info">
     <h1>Steam Game Recommendation Research System</h1>
+     <h2>目前已註冊總人數：<?php echo $register_num; ?>人</h2>
+     <h2>禮券資格無效人數：<?php echo $problem_check_num; ?>人</h2>
   </div>
 </div>
 <div class="form">

@@ -140,7 +140,7 @@ $row_count = $row_layout_num;
 
 
    
-   	echo 	'<div class="span3 animated fadeInLeft">
+   	echo 	'<div class="span3 animated slideInUp">
 				<div class="thumbnail small-card-background">
 					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">

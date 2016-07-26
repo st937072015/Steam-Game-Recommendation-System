@@ -17,7 +17,7 @@ $.ajax({
 	cache: false,
 	 beforeSend:function()
 	{
-			
+   $("#test1-section").hide();
    $("#test1-output").hide();
    $(".st-loader").show();
    $("#start-test1-button").hide();
@@ -33,13 +33,15 @@ $.ajax({
 if (test1_output == "受測結果數據紀錄檔案發生錯誤") {
 
     $(".st-loader").hide();
-
+    $("#test1-section").show();
    swal("發生錯誤", "請聯繫本系統管理員!", "error");
-
+   
 
 }else{
 
 	$("#start-test1-button").remove();
+
+	$("#test1-section").remove();
 
     $(".st-loader").hide();
 

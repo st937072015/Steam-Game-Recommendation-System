@@ -79,7 +79,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
 
 
-   	echo 	'<div class="span3 animated fadeInLeft">
+   	echo 	'<div class="span3 animated slideInUp">
 				<div class="thumbnail small-card-background">
 					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">
@@ -161,7 +161,7 @@ if ($game_search_result_num > 0) {
 
 
 
-   	echo 	'<div class="span3 animated fadeInLeft">
+   	echo 	'<div class="span3 animated slideInUp">
 				<div class="thumbnail small-card-background">
 					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">
@@ -335,7 +335,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
 
 
-   	echo 	'<div class="span3 animated fadeInLeft">
+   	echo 	'<div class="span3 animated slideInUp">
 				<div class="thumbnail small-card-background">
 					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">
@@ -410,7 +410,7 @@ $game_search_result_num = mysqli_num_rows($game_search_result);
 
 
 
-   	echo 	'<div class="span3 animated fadeInLeft">
+   	echo 	'<div class="span3 animated slideInUp">
 				<div class="thumbnail small-card-background">
 					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">
@@ -495,7 +495,7 @@ $row_count = $row_layout_num;
 
 
    
-   	echo 	'<div class="span3 animated fadeInLeft">
+   	echo 	'<div class="span3 animated slideInUp">
 				<div class="thumbnail small-card-background">
 					<img src="http://cdn.akamai.steamstatic.com/steam/apps/' . $row['game_appid'] . '/header.jpg">
 					<div class="caption">
