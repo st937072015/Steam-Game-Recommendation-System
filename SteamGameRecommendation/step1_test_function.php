@@ -1,5 +1,5 @@
 <?php 
-require_once "CosineSimilarity.php";
+require_once "lib/CosineSimilarity.php";
 
 // 算出受測者所選遊戲之平均分數陣列向量
 function get_sum_json($file_path, $fav_game_array){

@@ -61,7 +61,7 @@ $("#username-status").attr("class", "account-ststus-correct").text("帳號通過
 $("#password-status").attr("class", "account-ststus-correct").text("密碼通過").show();
 
 
-window.location="panel_main.php";
+window.location="manual_index.php";
 
 
 }else if(login_check == "account_error"){

@@ -144,6 +144,111 @@ return false;
 }
 
 
+// 上傳人格特質心理測驗結果之圖片檔
+function upload_txt($user_id, $user_name){
+
+
+if (isset($_FILES['file']['type']) && $_FILES['file']['type'] != null) {
+
+
+	
+
+$legal_format = array('application/zip', 'application/x-zip-compressed', 'multipart/x-zip', 'application/x-compressed');
+
+
+
+
+
+if ($_FILES['file']['size'] < 3000000 && ($_FILES['file']['type']=='application/zip' || $_FILES['file']['type']=='application/x-zip-compressed' || $_FILES['file']['type']=='multipart/x-zip'|| $_FILES['file']['type']=='application/x-compressed')) {
+	
+
+// 若上傳發生錯誤
+if ($_FILES['file']['error'] > 0) {
+
+
+ return 'file upload error';
+ 
+
+}else if (file_exists('personality_member/'.$user_id.'/'.$user_name.'_txt_'.$_FILES['file']['name'])) {
+
+
+return 'file already uploaded'; 
+
+	
+}else{
+
+$source_path = $_FILES['file']['tmp_name'];
+
+$_FILES["file"]["tmp_name"];
+
+$store_path = 'personality_member/'.$user_id.'/'.$user_name.'_txt_'.$_FILES['file']['name'];
+
+
+
+if (move_uploaded_file($source_path, $store_path)) {
+
+
+
+	return 'file upload success';
+}else{
+
+return 'file upload error';
+
+	
+}
+
+
+
+
+
+
+}
+
+
+
+
+
+
+}else{
+
+
+echo 'illegal file size or type';
+
+
+
+
+}
+
+
+
+
+
+
+
+
+}
+
+
+
+
+} //<--upload_txt_file-->end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ?>

@@ -19,7 +19,7 @@ require_once("test_status.php");
     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
     <script src="js/sweetalert.min.js"></script>
-    <script src="js/personality_form_upload.js"></script>
+    <script src="js/step2_test.js"></script>
    
 
 </head>
@@ -45,17 +45,15 @@ $row = test_finish_status($user_id, $conn);
 
 
 
-if ($row['personality_form_finish'] != 1) {
+if ($row['txt_upload'] != 1 ) {
 	
-echo '<div id = "personality-test-section" class="row">
+echo '<div id = "step2-test-section" class="row">
 <div class="span12">
 
 <div class="hero-unit">
 <center>
-<h1>以下為人格特質心理測驗網址</h1>
-<a class="steam-index" href="http://meetype.com/bigfive-test" target="_blank"><h2>開始心理測驗</h2></a>
-
-<form id="upload_personality_form" method="post" enctype="multipart/form-data">
+<h1>請上傳5~10篇每篇至少要200個字以上自己打出來的文字txt檔案壓縮成zip檔後上傳</h1>
+<form id="upload_txt_form" method="post" enctype="multipart/form-data">
 
 
 <div class="row">
@@ -65,7 +63,7 @@ echo '<div id = "personality-test-section" class="row">
 </div>
 
 
-<button type="submit" class="btn btn-large btn-inverse"><i class="fa fa-cloud-upload"></i> 上傳心理測驗結果</button>
+<button type="submit" class="btn btn-large btn-inverse"><i class="fa fa-cloud-upload"></i> 上傳txt文字解壓縮檔</button>
 
 
 </form>
@@ -85,10 +83,23 @@ echo '<div id = "personality-test-section" class="row">
 }else{
 
 
+echo '<div id = "step2-test-section" class="row">
+<div class="span12">
+
+<div class="hero-unit">
+<center>
+<h1>您的txt文字壓縮檔已經完成並上傳過結果囉!</h1>
 
 
+</center>
 
-echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">您的人格特質心理測驗已經完成並上傳過結果囉!</h1></center>';
+
+   </div>
+
+
+	</div>
+     </div>';
+
 
 
 
@@ -100,6 +111,7 @@ echo '<center><img src="img/notify/warning.png" height="250" width="300"><h1 sty
 
  ?>
 
+<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">受測階段2測驗功能需再擇日進行，需依受測階段一的整體進度而定受測時間。Coming Soon!</h1></center>;
 
 </div>
 

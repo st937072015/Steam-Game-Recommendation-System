@@ -18,9 +18,8 @@ $count = count($_SESSION['fav_cart']);
 <head>
 	<meta charset="UTF-8">
 	<title>Steam Game Recommendation System</title>
+	<link rel="shortcut icon" href="img/notify/favicon.ico">  
 	<link rel="stylesheet" href="css/bootstrap.css">
-
-	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/panel_toggle_switch.css">
 	<link rel="stylesheet" href="css/panel_style.css">
 	<link rel="stylesheet" href="css/notify_style.css">
