@@ -13,11 +13,9 @@ require_once("login_double_check.php");
 	<link rel="stylesheet" href="css/panel_style.css">
 	<link rel="stylesheet" href="css/notify_style.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
-	<link rel="stylesheet" href="css/percircle.css">
 
     <script src="js/jquery-3.0.0.js"></script>
     <script src="js/jquery-migrate-3.0.0.js"></script>
-    <script src="js/percircle.js"></script>
       
 
 </head>
@@ -27,7 +25,21 @@ require_once("header.php");
 ?>
 <div class="container">
 
+<div class="row">
+<div class="span12">
 
+<div class="hero-unit">
+<center>
+<h1>受測須知與系統使用說明書</h1>
+<a href="https://goo.gl/P4aLQZ" target="_blank"><h1><i class="fa fa-book"></i>請點我</h1></a>
+</center>
+
+
+   </div>
+
+
+	</div>
+     </div>
 
 
 	</div> <!-- /container -->

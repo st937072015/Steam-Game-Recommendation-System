@@ -21,6 +21,7 @@ $row = test_finish_status($user_id, $conn);
 	<link rel="stylesheet" href="css/panel_style.css">
 	<link rel="stylesheet" href="css/notify_style.css">
 	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/percircle.css">
 
     <script src="js/jquery-3.0.0.js"></script>
@@ -99,7 +100,7 @@ if ($row['txt_upload'] == 1) {
   </div>
 </div>
 
-</center>
+
 
 <?php 
 
@@ -130,6 +131,18 @@ echo '<h2><i class="fa fa-flag-checkered"></i> 受測階段2推薦計算測驗�
 echo '<h2><i class="fa fa-flag-checkered"></i> 受測階段2推薦結果給予評分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-times" style="color:#c02121;"></i></h2>';
 
 ?>
+
+
+<div class="animated flipInX">
+				<div class="thumbnail small-card-background">
+					<img src="img/notify/gift_coupon.jpg">
+					<div class="caption">
+						<h3>受測完成獎勵</h3>
+						<h3>家樂福200元禮券</h3>
+					</div>
+				</div>
+			</div>
+
 
 </center>
 

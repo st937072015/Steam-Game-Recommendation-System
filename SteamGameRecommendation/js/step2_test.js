@@ -30,7 +30,7 @@ $.ajax({
     swal("上傳成功", "您的文字壓縮檔已上傳成功囉!","success");
 
     $("#personality-test-section").remove();
-    $("#upload-status").html('<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">您的人格特質心理測驗已經完成並上傳過結果囉!</h1></center>').show();
+    $("#upload-status").html('<center><img src="img/notify/warning.png" height="250" width="300"><h1 style="color:#ffffff;">您的txt文字壓縮檔已經完成並上傳過結果囉!</h1></center>').show();
 
   }else{
 
