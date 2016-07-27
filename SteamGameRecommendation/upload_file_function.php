@@ -21,7 +21,7 @@ function upload_personality_image($user_id, $user_name){
 if (isset($_FILES['file']['type']) && $_FILES['file']['type'] != null) {
 	
 
-$legal_format = array('jpeg','jpg','png');
+$legal_format = array('jpeg','jpg','png','JPEG','JPG','PNG');
 
 $temporary = explode('.', $_FILES['file']['name']);
 
@@ -54,7 +54,7 @@ $store_path = 'personality_member/'.$user_id.'/'.$user_name.'_'.$_FILES['file'][
 
 
 
-if (move_uploaded_file($source_path, $store_path)) {
+if (move_uploaded_file($source_path, iconv("UTF-8", "big5", $store_path))) {
 
 
 
@@ -185,7 +185,7 @@ $store_path = 'personality_member/'.$user_id.'/'.$user_name.'_txt_'.$_FILES['fil
 
 
 
-if (move_uploaded_file($source_path, $store_path)) {
+if (move_uploaded_file($source_path, iconv("UTF-8", "big5", $store_path))) {
 
 
 
