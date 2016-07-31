@@ -153,13 +153,17 @@ if (isset($_FILES['file']['type']) && $_FILES['file']['type'] != null) {
 
 	
 
-$legal_format = array('application/zip', 'application/x-zip-compressed', 'multipart/x-zip', 'application/x-compressed');
+$legal_format = array('zip', 'ZIP');
+
+$temporary = explode('.', $_FILES['file']['name']);
+
+$file_legal = end($temporary);
 
 
 
 
 
-if ($_FILES['file']['size'] < 3000000 && ($_FILES['file']['type']=='application/zip' || $_FILES['file']['type']=='application/x-zip-compressed' || $_FILES['file']['type']=='multipart/x-zip'|| $_FILES['file']['type']=='application/x-compressed')) {
+if ($_FILES['file']['size'] < 3000000 && in_array($file_legal, $legal_format)) {
 	
 
 // 若上傳發生錯誤

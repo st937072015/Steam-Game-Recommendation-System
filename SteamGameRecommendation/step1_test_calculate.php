@@ -17,6 +17,8 @@ $user_id = $_SESSION['user_id'];
 // 儲存所有計算排行結果
 $record = array();
 
+// 儲存所有方法之所選擇遊戲之平均人格分數
+$average_personality_score = array();
 
 // 儲存受測者所挑選之遊戲
 $record['select_game'] = array_flip($fav_game_array);
@@ -32,7 +34,7 @@ $score1_1 = score_rank('personality_score_json/none_review_merge/Rock_none_revie
 
 $record['Rock_none_review_merge'] = $score1_1;
 
-
+$average_personality_score['Rock_none_review_merge'] = $sum1_1;
 
 unset($sum1_1);
 
@@ -45,7 +47,7 @@ $score1_2 = score_rank('personality_score_json/none_user_merge/Rock_none_user_me
 
 $record['Rock_none_user_merge'] = $score1_2;
 
-
+$average_personality_score['Rock_none_user_merge'] = $sum1_2;
 
 unset($sum1_2);
 
@@ -58,7 +60,7 @@ $score1_3 = score_rank('personality_score_json/review_merge/Rock_review_merge.js
 
 $record['Rock_review_merge'] = $score1_3;
 
-
+$average_personality_score['Rock_review_merge'] = $sum1_3;
 
 unset($sum1_3);
 
@@ -71,7 +73,7 @@ $score1_4 = score_rank('personality_score_json/user_merge/Rock_user_merge.json',
 
 $record['Rock_user_merge'] = $score1_4;
 
-
+$average_personality_score['Rock_user_merge'] = $sum1_4;
 
 unset($sum1_4);
 
@@ -86,7 +88,7 @@ $score2_1 = score_rank('personality_score_json/none_review_merge/Mairesse_none_r
 
 $record['Mairesse_none_review_merge'] = $score2_1;
 
-
+$average_personality_score['Mairesse_none_review_merge'] = $sum2_1;
 
 unset($sum2_1);
 
@@ -99,7 +101,7 @@ $score2_2 = score_rank('personality_score_json/none_user_merge/Mairesse_none_use
 
 $record['Mairesse_none_user_merge'] = $score2_2;
 
-
+$average_personality_score['Mairesse_none_user_merge'] = $sum2_2;
 
 unset($sum2_2);
 
@@ -111,7 +113,7 @@ $score2_3 = score_rank('personality_score_json/review_merge/Mairesse_review_merg
 
 $record['Mairesse_review_merge'] = $score2_3;
 
-
+$average_personality_score['Mairesse_review_merge'] = $sum2_3;
 
 unset($sum2_3);
 
@@ -123,7 +125,7 @@ $score2_4 = score_rank('personality_score_json/user_merge/Mairesse_user_merge.js
 
 $record['Mairesse_user_merge'] = $score2_4;
 
-
+$average_personality_score['Mairesse_user_merge'] = $sum2_4;
 
 unset($sum2_4);
 
@@ -138,7 +140,7 @@ $score3_1 = score_rank('personality_score_json/none_review_merge/Chang_none_revi
 
 $record['Chang_none_review_merge'] = $score3_1;
 
-
+$average_personality_score['Chang_none_review_merge'] = $sum3_1;
 
 unset($sum3_1);
 
@@ -150,7 +152,7 @@ $score3_2 = score_rank('personality_score_json/none_user_merge/Chang_none_user_m
 
 $record['Chang_none_user_merge'] = $score3_2;
 
-
+$average_personality_score['Chang_none_user_merge'] = $sum3_2;
 
 unset($sum3_2);
 
@@ -162,7 +164,7 @@ $score3_3 = score_rank('personality_score_json/review_merge/Chang_review_merge.j
 
 $record['Chang_review_merge'] = $score3_3;
 
-
+$average_personality_score['Chang_review_merge'] = $sum3_3;
 
 unset($sum3_3);
 
@@ -175,13 +177,15 @@ $score3_4 = score_rank('personality_score_json/user_merge/Chang_user_merge.json'
 
 $record['Chang_user_merge'] = $score3_4;
 
-
+$average_personality_score['Chang_user_merge'] = $sum3_4;
 
 
 unset($sum3_4);
 
+// 將12種結果之所選遊戲之平均人格分數寫入json檔
+$record['average_personality_score'] = $average_personality_score;
 
-
+unset($average_personality_score);
 
 
 // 將結果寫入json檔並輸出

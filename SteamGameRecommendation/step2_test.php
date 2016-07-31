@@ -52,7 +52,7 @@ echo '<div id = "step2-test-section" class="row">
 
 <div class="hero-unit">
 <center>
-<h1>請上傳5~10篇每篇至少要200個字以上自己打出來的文字txt檔案壓縮成zip檔後上傳</h1>
+<h1>請上傳至少5篇以上，每篇至少要200個字以上自己打出來的文字txt檔案壓縮成zip檔後上傳</h1>
 <form id="upload_txt_form" method="post" enctype="multipart/form-data">
 
 

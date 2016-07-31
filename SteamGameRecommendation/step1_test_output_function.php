@@ -686,6 +686,8 @@ echo '
 </form>
 </center>';
 
+echo'<h2 style="color:#edcd1e;">注意！送出評分黃色按鈕的功能只能點選一次，*必須先在12種推薦結果每1種結果的評分處(一共要進行12次評分處的評分)都各自給予評分後*才可點選此按鈕一次把12個評分分數同時一起送出。以上，非常感謝您的配合！祝您受測愉快！</h2>';
+
 echo'<center><a id="rate_button" class="btn btn-large btn-warning" href="#">送出評分</a></center>
 <div class="st-loader"><span class="equal"></span></div>';
 
