@@ -100,7 +100,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate1">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -150,7 +151,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate2">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -202,7 +204,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate3">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -254,7 +257,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate4">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -305,7 +309,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate5">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -353,7 +358,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate6">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -406,7 +412,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate7">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -455,7 +462,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate8">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -509,7 +517,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate9">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -561,7 +570,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate10">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -611,7 +621,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate11">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>
@@ -659,7 +670,8 @@ echo '
           <div class="caption">
             <h3>評分處</h3>
             <select name="rate12">
-             <option value="5">★★★★★</option>
+             <option value="無">尚未評分</option>            
+        <option value="5">★★★★★</option>
              <option value="4">★★★★☆</option>
              <option value="3">★★★☆☆</option>
             <option value="2">★★☆☆☆</option>

@@ -138,7 +138,7 @@ echo '<h2><i class="fa fa-flag-checkered"></i> 受測階段2推薦結果給予�
 					<img src="img/notify/gift_coupon.jpg">
 					<div class="caption">
 						<h3>受測完成獎勵</h3>
-						<h3>家樂福200元禮券</h3>
+						<h3>家樂福300元禮券</h3>
 					</div>
 				</div>
 			</div>

@@ -31,7 +31,8 @@ require_once("header.php");
 <div class="hero-unit">
 <center>
 <h1>受測須知與系統使用說明書</h1>
-<a href="https://goo.gl/P4aLQZ" target="_blank"><h1><i class="fa fa-book"></i>請點我</h1></a>
+<a href="https://goo.gl/fbbR9w" target="_blank"><h1><i class="fa fa-book"></i>請點我</h1></a>
+<a href="https://goo.gl/gtLzK4" target="_blank"><h1><i class="fa fa-book"></i>(備用載點)</h1></a>
 </center>
 
 
